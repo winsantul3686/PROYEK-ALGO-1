@@ -1118,7 +1118,7 @@ def pembayaran(username):
             for row in reader:
                 if len(row) < 5:
                     continue  
-                
+
                 user, produk, harga, jumlah, total = row
                 if user == username:
                     if produk in keranjang_user:
@@ -1272,9 +1272,9 @@ def data_pengiriman():
     
     with open('provinsi.csv', mode='r') as file:
         reader = csv.DictReader(file)
-        provinsi_found = False  # Flag untuk mengecek apakah provinsi ditemukan
+        provinsi_found = False 
         for row in reader:
-            if row['provinsi'].lower() == provinsi_pembeli.lower():  # Membandingkan dengan provinsi dari input
+            if row['provinsi'].lower() == provinsi_pembeli.lower(): 
                 provinsi_found = True
                 ongkir = row['ongkir']
                 print(f"Ongkir untuk wilayah {provinsi_pembeli} adalah {ongkir}!")
