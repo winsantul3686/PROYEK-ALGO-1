@@ -50,6 +50,35 @@ list_jenisproduk5 = {
 
 def home():
     os.system('cls' if os.name == 'nt' else 'clear') 
+    print('''
+        ░██████╗███████╗██╗░░░░░░█████╗░███╗░░░███╗░█████╗░████████╗
+        ██╔════╝██╔════╝██║░░░░░██╔══██╗████╗░████║██╔══██╗╚══██╔══╝
+        ╚█████╗░█████╗░░██║░░░░░███████║██╔████╔██║███████║░░░██║░░░
+        ░╚═══██╗██╔══╝░░██║░░░░░██╔══██║██║╚██╔╝██║██╔══██║░░░██║░░░
+        ██████╔╝███████╗███████╗██║░░██║██║░╚═╝░██║██║░░██║░░░██║░░░
+        ╚═════╝░╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
+
+        ██████╗░░█████╗░████████╗░█████╗░███╗░░██╗░██████╗░  
+        ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗████╗░██║██╔════╝░  
+        ██║░░██║███████║░░░██║░░░███████║██╔██╗██║██║░░██╗░  
+        ██║░░██║██╔══██║░░░██║░░░██╔══██║██║╚████║██║░░╚██╗  
+        ██████╔╝██║░░██║░░░██║░░░██║░░██║██║░╚███║╚██████╔╝  
+        ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░  
+
+        ██████╗░██╗
+        ██╔══██╗██║
+        ██║░░██║██║
+        ██║░░██║██║
+        ██████╔╝██║
+        ╚═════╝░╚═╝
+
+        ████████╗██████╗░██╗░░░░░██╗░█████╗░██╗░░░██╗░█████╗░
+        ╚══██╔══╝██╔══██╗██║░░░░░██║██╔══██╗╚██╗░██╔╝██╔══██╗
+        ░░░██║░░░██████╔╝██║░░░░░██║███████║░╚████╔╝░███████║
+        ░░░██║░░░██╔══██╗██║██╗░░██║██╔══██║░░╚██╔╝░░██╔══██║
+        ░░░██║░░░██║░░██║██║╚█████╔╝██║░░██║░░░██║░░░██║░░██║
+        ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝
+        ''')
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
@@ -1031,56 +1060,41 @@ def jenis_produk(username):
         input("Tekan Enter untuk kembali.")
         jenis_produk(username)
 
-# Fungsi untuk menambahkan produk ke keranjang
 def keranjang(username, produk, harga):
     jumlah = int(input(f"Masukkan jumlah {produk}: "))
     total_harga = harga * jumlah
 
     keranjang_file = 'KeranjangTRIJAYA.csv'
     data_keranjang = []
-
-    # Cek apakah file sudah ada
     file_exists = os.path.isfile(keranjang_file)
-
-    # Baca file jika sudah ada
     if file_exists:
         with open(keranjang_file, mode='r') as file:
             reader = csv.reader(file)
             data_keranjang = list(reader)
-    
-    # Header file CSV
     header = ["username", "produk", "harga", "jumlah", "total"]
-    
-    # Cek apakah produk sudah ada di keranjang
     produk_ada = False
     for i in range(len(data_keranjang)):
         if len(data_keranjang[i]) == 5:
             user, prod, hrg, jml, tot = data_keranjang[i]
             if user == username and prod == produk:
-                # Jika produk sudah ada, perbarui jumlah dan total
-                data_keranjang[i][3] = str(int(jml) + jumlah)  # Update jumlah
-                data_keranjang[i][4] = str(int(hrg) * int(data_keranjang[i][3]))  # Update total
+                
+                data_keranjang[i][3] = str(int(jml) + jumlah)  
+                data_keranjang[i][4] = str(int(hrg) * int(data_keranjang[i][3])) 
                 produk_ada = True
                 break
-    
     if not produk_ada:
-        # Tambahkan produk baru jika belum ada
         data_keranjang.append([username, produk, str(harga), str(jumlah), str(total_harga)])
-    
-    # Tulis ulang data ke file
     with open(keranjang_file, mode='w', newline='') as file:
         writer = csv.writer(file)
         if not file_exists or data_keranjang[0] != header:
             writer.writerow(header)
         writer.writerows(data_keranjang)
-    
     print(f"{produk} berhasil ditambahkan ke keranjang!\n")
     print('''
         A. Tambahkan produk lagi
         B. Lanjutkan ke pembayaran
         ''')
     keranjang_beli = input("Pilih menu: ").strip().upper()
-
     if keranjang_beli == "A":
         jenis_produk(username)
     elif keranjang_beli == "B":
@@ -1089,31 +1103,24 @@ def keranjang(username, produk, harga):
         print("Pilihan tidak tersedia. Kembali ke menu utama.")
         jenis_produk(username)
 
-# Fungsi pembayaran
 def pembayaran(username):
     os.system('cls' if os.name == 'nt' else 'clear')
     print(f"Memproses pembayaran untuk {username}...\n")
-    
-    # Membaca keranjang pengguna
     total_belanja = 0
     keranjang_user = {}
-
     print(f"Keranjang {username}:")
     print(f"{'Produk':<15} {'Harga':<10} {'Jumlah':<8} {'Total':<10}")
     print("-" * 50)
-
     try:
         with open('KeranjangTRIJAYA.csv', mode='r') as file:
             reader = csv.reader(file)
-            header = next(reader)  # Baca header
-            
+            header = next(reader)  
             for row in reader:
                 if len(row) < 5:
-                    continue  # Lewati baris tidak valid
+                    continue  
                 
                 user, produk, harga, jumlah, total = row
                 if user == username:
-                    # Jika produk sudah ada, perbarui jumlah dan total
                     if produk in keranjang_user:
                         keranjang_user[produk]['jumlah'] += int(jumlah)
                         keranjang_user[produk]['total'] += int(total)
@@ -1123,18 +1130,17 @@ def pembayaran(username):
                             'jumlah': int(jumlah),
                             'total': int(total),
                         }
-
-        # Tampilkan keranjang pengguna
         for produk, data in keranjang_user.items():
             print(f"{produk:<15} {data['harga']:<10} {data['jumlah']:<8} {data['total']:<10}")
             total_belanja += data['total']
     except FileNotFoundError:
         print("Keranjang kosong. Silakan tambahkan produk terlebih dahulu.")
         return
+    
     except ValueError:
         print("Terjadi kesalahan pada format data keranjang.")
         return
-
+    
     print("-" * 50)
     print(f"Total Belanja: Rp{total_belanja}")
     print('''
@@ -1153,7 +1159,7 @@ def pembayaran(username):
         print("Metode pembayaran tidak valid.")
         pembayaran(username)
 
-# Fungsi pembayaran melalui bank
+
 def bank_account(total_belanja):
     print('''
     Pilih Bank:
@@ -1174,7 +1180,7 @@ def bank_account(total_belanja):
         ''')
         pilihan = input("Pilih menu: ").strip().upper()
         if pilihan == "A":
-            home()  # Ganti dengan fungsi menu utama
+            home()  
         elif pilihan == "B":
             print("Terima kasih telah berbelanja di TRIJAYA!")
             exit()
@@ -1185,7 +1191,7 @@ def bank_account(total_belanja):
         print("Pilihan bank tidak valid.")
         bank_account(total_belanja)
     
-# Fungsi untuk mengosongkan keranjang
+
 def kosongkan_keranjang(username):
     data_baru = []
     try:
@@ -1193,13 +1199,11 @@ def kosongkan_keranjang(username):
             reader = csv.reader(file)
             header = next(reader)
             for row in reader:
-                if row[0] != username:  # Simpan data pengguna lain
+                if row[0] != username:  
                     data_baru.append(row)
     except FileNotFoundError:
         print("File keranjang tidak ditemukan.")
         return
-    
-    # Tulis ulang data yang bukan milik pengguna
     with open('KeranjangTRIJAYA.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(header)
@@ -1280,8 +1284,7 @@ def data_pengiriman():
             print(f"Provinsi {provinsi_pembeli} tidak ditemukan dalam daftar.")
             return None
 
-# def deskripsi_produk():
-#     pass
+
 
 
 def main():
