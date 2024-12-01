@@ -49,99 +49,114 @@ list_jenisproduk5 = {
 }
 
 def home():
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear') 
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
-    print('''
-          1. Register
-          2. Login
-          3. Admin
-           ''')
-    home = input("Pilih fitur : ")
+    print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+    print("""
+          [1] Register
+          [2] Login
+          [3] Admin Login
+          [4] Exit
+    """)
+    print("----------------------------------------------------------")
+    
+    home = input("Pilih fitur (1/2/3/4): ")
     if home == "1":
         register()
     elif home == "2":
         login()
     elif home == "3":
         login_admin()
+    elif home == "4":
+        print("Terima kasih telah menggunakan aplikasi TRIJAYA! Sampai jumpa.")
     else:
-        print ("Pilihan tidak tersedia")
+        print("Pilihan tidak tersedia, coba lagi.")
+        home()  
 
 def register():
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear') 
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
     print("______________________  REGISTER  ______________________")
+    print("----------------------------------------------------------")
+    
     username = input("Masukkan username anda: ").strip()
     password = input("Masukkan password anda: ").strip()
+
     
     file_exists = os.path.isfile('RegTRIJAYA.csv')
 
+    
     with open('RegTRIJAYA.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
-        if not file_exists:  
-            writer.writerow(["username","password"])
-        writer.writerow([username,password])
-        print("________________________")
-        print("Akun telah didaftarkan!!")
-        print("________________________")
-        print("1.Login")
-        print("2.Selesai")
-        otw_login = input ("pilihlah angka untuk selanjutnya (1/2) :")
-        if otw_login == '2':
-            print("=-=-=-=-=-=- Pendaftaran selesai! -=-=-=-=-=-=")
-            input("klik enter untuk login")
-        elif otw_login == '1':
-            login()
-        else:
-            print("input tidak tersedia")
+        
+        if not file_exists:
+            writer.writerow(["username", "password"])
+        
+        writer.writerow([username, password])
+
+        return home ()
 
 def login():
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear') 
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
     print("________________________ LOGIN _________________________")
+    print("----------------------------------------------------------")
 
     username = input("Masukkan username: ").strip()
     password = input("Masukkan password: ").strip()
 
-    if not os.path.isfile('RegTRIJAYA.csv'): 
-        print("Akun tidak terdaftar. Silakan daftar terlebih dahulu!.")
+    if not os.path.isfile('RegTRIJAYA.csv'):
+        print("Akun tidak terdaftar. Silakan daftar terlebih dahulu!")
+        input("Tekan Enter untuk kembali ke menu utama...")
         return None
 
     with open('RegTRIJAYA.csv', mode='r') as file:
         reader = csv.DictReader(file)
+
         for row in reader:
             if row['username'] == username and row['password'] == password:
                 print(f"Selamat datang, {username}!")
+                print("----------------------------------------------------------")
                 jenis_produk(username)
                 return username
+
         print("Login gagal! Username atau password salah.")
+        print("----------------------------------------------------------")
+        input("Tekan Enter untuk mencoba lagi...")
         return None
+       
 def login_admin():
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear') 
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
-    print("________________________ LOGIN _________________________")
+    print("______________________  ADMIN LOGIN  ______________________")
+    print("----------------------------------------------------------")
 
     username = input("Masukkan username: ").strip()
     password = input("Masukkan password: ").strip()
 
-    if not os.path.isfile('admin.csv'): 
-        print("Akun tidak terdaftar. Silakan daftar terlebih dahulu!.")
+    if not os.path.isfile('admin.csv'):
+        print("Akun admin tidak terdaftar. Silakan daftar terlebih dahulu!")
+        input("Tekan Enter untuk kembali ke menu utama...")
         return None
 
     with open('admin.csv', mode='r') as file:
         reader = csv.DictReader(file)
+
         for row in reader:
             if row['username'] == username and row['password'] == password:
-                print(f"Selamat datang, {username}!")
+                print(f"Selamat datang, Admin {username}!")
+                print("----------------------------------------------------------")
                 jenis_produk(username)
                 return username
+            
         print("Login gagal! Username atau password salah.")
+        print("----------------------------------------------------------")
+        input("Tekan Enter untuk mencoba lagi...")
         return None
-             
-
 
 def jenis_produk(username):
     os.system('cls')
