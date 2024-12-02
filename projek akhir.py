@@ -31,7 +31,7 @@ list_jenisproduk3 = {
     "2": ("Pisau Panen", 25000),
     "3": ("Keranjang Panen Plastik", 30000),
     "4": ("Timbangan Digital", 150000),
-    "5": ("Kantong Plastik Panen (10 pcs)", 30000)
+    "5": ("Kantong Plastik Panen", 30000)
 }
 list_jenisproduk4 = {
     "1": ("Pupuk Organik", 35000),
@@ -41,54 +41,25 @@ list_jenisproduk4 = {
     "5": ("Kapur Dolomit", 20000)
 }
 list_jenisproduk5 = {
-    "1": ("Pestisida Organik", 50000),
-    "2": ("Fungisida Cair", 70000),
-    "3": ("Insektisida", 65000),
-    "4": ("Herbisida", 80000),
-    "5": ("ZPT (Zat Pengatur Tumbuh)", 90000)
+    "1": ("Pestisida Organik", 60000),
+    "2": ("Fungisida Cair", 40000),
+    "3": ("Insektisida", 50000),
+    "4": ("Herbisida", 45000),
+    "5": ("ZPT", 35000)
 }
 
 def home():
     os.system('cls' if os.name == 'nt' else 'clear') 
-    print('''
-        ░██████╗███████╗██╗░░░░░░█████╗░███╗░░░███╗░█████╗░████████╗
-        ██╔════╝██╔════╝██║░░░░░██╔══██╗████╗░████║██╔══██╗╚══██╔══╝
-        ╚█████╗░█████╗░░██║░░░░░███████║██╔████╔██║███████║░░░██║░░░
-        ░╚═══██╗██╔══╝░░██║░░░░░██╔══██║██║╚██╔╝██║██╔══██║░░░██║░░░
-        ██████╔╝███████╗███████╗██║░░██║██║░╚═╝░██║██║░░██║░░░██║░░░
-        ╚═════╝░╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
-
-        ██████╗░░█████╗░████████╗░█████╗░███╗░░██╗░██████╗░  
-        ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗████╗░██║██╔════╝░  
-        ██║░░██║███████║░░░██║░░░███████║██╔██╗██║██║░░██╗░  
-        ██║░░██║██╔══██║░░░██║░░░██╔══██║██║╚████║██║░░╚██╗  
-        ██████╔╝██║░░██║░░░██║░░░██║░░██║██║░╚███║╚██████╔╝  
-        ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░  
-
-        ██████╗░██╗
-        ██╔══██╗██║
-        ██║░░██║██║
-        ██║░░██║██║
-        ██████╔╝██║
-        ╚═════╝░╚═╝
-
-        ████████╗██████╗░██╗░░░░░██╗░█████╗░██╗░░░██╗░█████╗░
-        ╚══██╔══╝██╔══██╗██║░░░░░██║██╔══██╗╚██╗░██╔╝██╔══██╗
-        ░░░██║░░░██████╔╝██║░░░░░██║███████║░╚████╔╝░███████║
-        ░░░██║░░░██╔══██╗██║██╗░░██║██╔══██║░░╚██╔╝░░██╔══██║
-        ░░░██║░░░██║░░██║██║╚█████╔╝██║░░██║░░░██║░░░██║░░██║
-        ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝
-        ''')
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-    print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
+    print("                SELAMAT DATANG di TRIJAYA               ")
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     print("""
-          [1] Register
-          [2] Login
-          [3] Admin Login
-          [4] Exit
+        [1] Register
+        [2] Login
+        [3] Admin Login
+        [4] Exit
     """)
-    print("----------------------------------------------------------")
+    print("--------------------------------------------------------")
     
     home = input("Pilih fitur (1/2/3/4): ")
     if home == "1":
@@ -106,10 +77,9 @@ def home():
 def register():
     os.system('cls' if os.name == 'nt' else 'clear') 
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-    print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
+    print("                SELAMAT DATANG di TRIJAYA               ")
     print("______________________  REGISTER  ______________________")
-    print("----------------------------------------------------------")
-    
+    print (" ")
     username = input("Masukkan username anda: ").strip()
     password = input("Masukkan password anda: ").strip()
 
@@ -130,10 +100,9 @@ def register():
 def login():
     os.system('cls' if os.name == 'nt' else 'clear') 
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-    print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
+    print("                SELAMAT DATANG di TRIJAYA               ")
     print("________________________ LOGIN _________________________")
-    print("----------------------------------------------------------")
-
+    print (" ")
     username = input("Masukkan username: ").strip()
     password = input("Masukkan password: ").strip()
 
@@ -160,9 +129,9 @@ def login():
 def login_admin():
     os.system('cls' if os.name == 'nt' else 'clear') 
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-    print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
-    print("______________________  ADMIN LOGIN  ______________________")
-    print("----------------------------------------------------------")
+    print("                SELAMAT DATANG di TRIJAYA               ")
+    print("______________________  ADMIN LOGIN  ___________________")
+    print (" ")
 
     username = input("Masukkan username: ").strip()
     password = input("Masukkan password: ").strip()
@@ -186,6 +155,7 @@ def login_admin():
         print("----------------------------------------------------------")
         input("Tekan Enter untuk mencoba lagi...")
         return None
+       
 def data_pengiriman():
     os.system('cls')
     print("======= DATA PENGIRIMAN =======")
@@ -247,20 +217,27 @@ def data_pengiriman():
 def jenis_produk(username):
     os.system('cls')
     print(f"Selamat datang, silahkan pilih jenis produk : ")
+    print("+-----+--------------------------------------+")
+    print("| No  | Nama Produk                          |")
+    print("+-----+--------------------------------------+")
     for i in list_jenisproduk:
-        print(i,".",list_jenisproduk[i])
+        print(f"| {i:<3} | {list_jenisproduk[i]:<36} |")
+    print("+-----+--------------------------------------+")
     jenis = input("Pilihlah jenis produk (1/2/3/4/5/6): ")
     if jenis == '1':
             os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Persiapan Lahan  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+            print("|            SELAMAT DATANG di TRIJAYA           |")
+            print("|_________________ Alat tanam ___________________|")
+            print("|____________  dan Persiapan lahan ______________|")
+            print("+-----+---------------------------+--------------+")
+            print("| No  | Nama Produk               | Harga (Rp)   |")
+            print("+-----+---------------------------+--------------+")
             for i in list_jenisproduk1:
                 nama_produk, harga_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk}")
-            
+                print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+            print("+-----+---------------------------+--------------+")
+
             pilih_produk1 = input("Pilih produk (1-5): ").strip()
             
             if pilih_produk1 == "1":
@@ -321,15 +298,18 @@ def jenis_produk(username):
                 
     elif jenis == '2':
             os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Pemeliharaan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+            print("|            SELAMAT DATANG di TRIJAYA           |")
+            print("|___________ Alat Pemeliharaan Tanaman __________|")
+
+            print("+-----+---------------------------+--------------+")
+            print("| No  | Nama Produk               | Harga (Rp)   |")
+            print("+-----+---------------------------+--------------+")
             for i in list_jenisproduk2:
                 nama_produk, harga_produk = list_jenisproduk2[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk}")
-            
+                print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+            print("+-----+---------------------------+--------------+")
+
             pilih_produk2 = input("Pilih produk (1-5): ").strip()
             
             if pilih_produk2 == "1":
@@ -387,24 +367,23 @@ def jenis_produk(username):
                 print("Pilihan tidak tersedia!")
                 input("Tekan Enter untuk kembali.")
                 jenis_produk(username)
+
     elif jenis == '3':
             os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+            print("|            SELAMAT DATANG di TRIJAYA           |")
+            print("|___________ Alat Panen dan Pascapanen __________|")
+
+            print("+-----+---------------------------+--------------+")
+            print("| No  | Nama Produk               | Harga (Rp)   |")
+            print("+-----+---------------------------+--------------+")
             for i in list_jenisproduk3:
                 nama_produk, harga_produk = list_jenisproduk3[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk}")
-            
+                print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+            print("+-----+---------------------------+--------------+")
+
             pilih_produk3 = input("Pilih produk (1-5): ").strip()
-            
-            for i in list_jenisproduk3:
-                print(i,".",list_jenisproduk3[i])
-            pilih_produk3 = input("pilih produk: ")
-            produk = ""
-        
+
             if pilih_produk3 == "1":
                 produk = "Sabit"
                 print("\nDetail Produk: ")
@@ -466,84 +445,18 @@ def jenis_produk(username):
          os.system('cls')
          search = input(f"Silahkan ketik barang yang anda cari :")
          if search == "cangkul" or search == "ember" :
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Persiapan Lahan  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+            print("|            SELAMAT DATANG di TRIJAYA           |")
+            print("|_________________ Alat tanam ___________________|")
+            print("|____________  dan Persiapan lahan ______________|")
+            print("+-----+---------------------------+--------------+")
+            print("| No  | Nama Produk               | Harga (Rp)   |")
+            print("+-----+---------------------------+--------------+")
             for i in list_jenisproduk1:
                 nama_produk, harga_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk}")
-            
-            pilih_produk1 = input("Pilih produk (1-5): ").strip()
-            
-            if pilih_produk1 == "1":
-                produk = "Cangkul"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat tanam serbaguna dari baja yang tahan lama
-                Spesifikasi: Material -> Baja tahan karat,Pegangan -> Kayu ergonomis
-                Harga: Rp 50.000''')
-            elif pilih_produk1 == "2":
-                produk = "Sekop"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat berbahan ringan dengan pegangan ergonomis
-                Spesifikasi: Material -> Baja ringan, Pegangan -> Plastik anti selip
-                Harga: Rp 40.000''')
-            elif pilih_produk1 == "3":
-                produk = "Garpu Tanah"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat tajam dan kuat untuk melonggarkan tanah
-                Spesifikasi: Material -> Baja, Pegangan -> Kayu solid, Dimensi: 25 cm
-                Harga: Rp 30.000''')
-            elif pilih_produk1 == "4":
-                produk = "Penugal Tanam Manual"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat sederhana untuk membuat lubang tanam
-                Spesifikasi: Material -> Logam tahan karat, Panjang -> 30 cm
-                Harga: Rp 30.000''')
-            elif pilih_produk1 == "5":
-                produk = "Ember Plastik"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Ember ringan untuk mengangkut air atau material lainnya
-                Spesifikasi: Material -> Plastik tebal, Kapasitas -> 10 liter
-                Harga: Rp 15.000''')
-            if pilih_produk1 in list_jenisproduk1:
-                produk, harga = list_jenisproduk1[pilih_produk1]
-                print(f"\n{produk} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                print('''
-                A. Masukkan keranjang
-                B. Beli dan bayar
-                ''')
-                keranjang_beli = input("Pilih menu: ").strip().upper()
-                if keranjang_beli == "A":
-                    keranjang(username, produk, harga)
-                elif keranjang_beli == "B":
-                    keranjang(username, produk, harga)
-                    pembayaran(username)
-                else:
-                    print("Pilihan tidak tersedia. Kembali ke menu.")
-                    jenis_produk(username)
-            else:
-                print("Pilihan tidak tersedia!")
-                input("Tekan Enter untuk kembali.")
-                jenis_produk(username)
-         os.system('cls')
-         search = input(f"Silahkan ketik barang yang anda cari :")
-         if search == "sekop" or search == "garpu tanah" :
-            print('''
-        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        $$$$$$$$$^^^^^  Alat Persiapan Lahan  ^^^^^$$$$$$$$
-        __________________ SELAMAT BERBELANJA ___________________
-        ''')
-            for i in list_jenisproduk1:
-                nama_produk, harga_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk}")
-            
+                print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+            print("+-----+---------------------------+--------------+")
+
             pilih_produk1 = input("Pilih produk (1-5): ").strip()
             
             if pilih_produk1 == "1":
@@ -603,17 +516,19 @@ def jenis_produk(username):
                 jenis_produk(username)
                 
          os.system('cls')
-         search = input(f"Silahkan ketik barang yang anda cari :")
-         if search == "ember" :
-            print('''
-        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        $$$$$$$$$^^^^^  Alat Persiapan Lahan  ^^^^^$$$$$$$$
-        __________________ SELAMAT BERBELANJA ___________________
-        ''')
+         if search == "sekop" or search == "garpu tanah" :
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+            print("|            SELAMAT DATANG di TRIJAYA           |")
+            print("|_________________ Alat tanam ___________________|")
+            print("|____________  dan Persiapan lahan ______________|")
+            print("+-----+---------------------------+--------------+")
+            print("| No  | Nama Produk               | Harga (Rp)   |")
+            print("+-----+---------------------------+--------------+")
             for i in list_jenisproduk1:
                 nama_produk, harga_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk}")
-            
+                print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+            print("+-----+---------------------------+--------------+")
+
             pilih_produk1 = input("Pilih produk (1-5): ").strip()
             
             if pilih_produk1 == "1":
@@ -671,17 +586,93 @@ def jenis_produk(username):
                 print("Pilihan tidak tersedia!")
                 input("Tekan Enter untuk kembali.")
                 jenis_produk(username)
+                
+         os.system('cls')
+         if search == "ember" :
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+            print("|            SELAMAT DATANG di TRIJAYA           |")
+            print("|_________________ Alat tanam ___________________|")
+            print("|____________  dan Persiapan lahan ______________|")
+            print("+-----+---------------------------+--------------+")
+            print("| No  | Nama Produk               | Harga (Rp)   |")
+            print("+-----+---------------------------+--------------+")
+            for i in list_jenisproduk1:
+                nama_produk, harga_produk = list_jenisproduk1[i]
+                print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+            print("+-----+---------------------------+--------------+")
+
+            pilih_produk1 = input("Pilih produk (1-5): ").strip()
+            
+            if pilih_produk1 == "1":
+                produk = "Cangkul"
+                print("\nDetail Produk: ")
+                print('''
+                Deskripsi Produk: Alat tanam serbaguna dari baja yang tahan lama
+                Spesifikasi: Material -> Baja tahan karat,Pegangan -> Kayu ergonomis
+                Harga: Rp 50.000''')
+            elif pilih_produk1 == "2":
+                produk = "Sekop"
+                print("\nDetail Produk: ")
+                print('''
+                Deskripsi Produk: Alat berbahan ringan dengan pegangan ergonomis
+                Spesifikasi: Material -> Baja ringan, Pegangan -> Plastik anti selip
+                Harga: Rp 40.000''')
+            elif pilih_produk1 == "3":
+                produk = "Garpu Tanah"
+                print("\nDetail Produk: ")
+                print('''
+                Deskripsi: Alat tajam dan kuat untuk melonggarkan tanah
+                Spesifikasi: Material -> Baja, Pegangan -> Kayu solid, Dimensi: 25 cm
+                Harga: Rp 30.000''')
+            elif pilih_produk1 == "4":
+                produk = "Penugal Tanam Manual"
+                print("\nDetail Produk: ")
+                print('''
+                Deskripsi: Alat sederhana untuk membuat lubang tanam
+                Spesifikasi: Material -> Logam tahan karat, Panjang -> 30 cm
+                Harga: Rp 30.000''')
+            elif pilih_produk1 == "5":
+                produk = "Ember Plastik"
+                print("\nDetail Produk: ")
+                print('''
+                Deskripsi: Ember ringan untuk mengangkut air atau material lainnya
+                Spesifikasi: Material -> Plastik tebal, Kapasitas -> 10 liter
+                Harga: Rp 15.000''')
+            if pilih_produk1 in list_jenisproduk1:
+                produk, harga = list_jenisproduk1[pilih_produk1]
+                print(f"\n{produk} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
+                print('''
+                A. Masukkan keranjang
+                B. Beli dan bayar
+                ''')
+                keranjang_beli = input("Pilih menu: ").strip().upper()
+                if keranjang_beli == "A":
+                    keranjang(username, produk, harga)
+                elif keranjang_beli == "B":
+                    keranjang(username, produk, harga)
+                    pembayaran(username)
+                else:
+                    print("Pilihan tidak tersedia. Kembali ke menu.")
+                    jenis_produk(username)
+            else:
+                print("Pilihan tidak tersedia!")
+                input("Tekan Enter untuk kembali.")
+                jenis_produk(username)
+
          elif search == "gembor" or search == "gunting" :
                 os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Pemeliharaan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|___________ Alat Pemeliharaan Tanaman __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk2:
                     nama_produk, harga_produk = list_jenisproduk2[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk2 = input("Pilih produk (1-5): ").strip()
                 
                 if pilih_produk2 == "1":
@@ -739,17 +730,21 @@ def jenis_produk(username):
                     print("Pilihan tidak tersedia!")
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
+                    
          elif search == "sprayer" or search == "pemangkas" :
                 os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Pemeliharaan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|___________ Alat Pemeliharaan Tanaman __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk2:
                     nama_produk, harga_produk = list_jenisproduk2[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk2 = input("Pilih produk (1-5): ").strip()
                 
                 if pilih_produk2 == "1":
@@ -807,17 +802,21 @@ def jenis_produk(username):
                     print("Pilihan tidak tersedia!")
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
+
          elif search == "pencabut" :
                 os.system('cls')
-                print('''
-                =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                $$$$$$$$$^^^^^  Alat Pemeliharaan Tanaman  ^^^^^$$$$$$$$
-                __________________ SELAMAT BERBELANJA ___________________
-                ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|___________ Alat Pemeliharaan Tanaman __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk2:
                     nama_produk, harga_produk = list_jenisproduk2[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk2 = input("Pilih produk (1-5): ").strip()
                 
                 if pilih_produk2 == "1":
@@ -875,23 +874,21 @@ def jenis_produk(username):
                     print("Pilihan tidak tersedia!")
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
-         elif search == "Sabit" or search == "Pisau" :
+         elif search == "sabit" or search == "pisau" :
                 os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|___________ Alat Panen dan Pascapanen __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk3:
                     nama_produk, harga_produk = list_jenisproduk3[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk3 = input("Pilih produk (1-5): ").strip()
-                
-                for i in list_jenisproduk3:
-                    print(i,".",list_jenisproduk3[i])
-                pilih_produk3 = input("pilih produk: ")
-                produk = ""
             
                 if pilih_produk3 == "1":
                     produk = "Sabit"
@@ -950,23 +947,21 @@ def jenis_produk(username):
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
            
-         elif search == "Keranjang" or search == "Timbangan" :
+         elif search == "keranjang" or search == "timbangan" :
                 os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|___________ Alat Panen dan Pascapanen __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk3:
                     nama_produk, harga_produk = list_jenisproduk3[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk3 = input("Pilih produk (1-5): ").strip()
-                
-                for i in list_jenisproduk3:
-                    print(i,".",list_jenisproduk3[i])
-                pilih_produk3 = input("pilih produk: ")
-                produk = ""
             
                 if pilih_produk3 == "1":
                     produk = "Sabit"
@@ -1024,17 +1019,22 @@ def jenis_produk(username):
                     print("Pilihan tidak tersedia!")
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
-         elif search == "Plastik" :
+
+         elif search == "plastik" :
                 os.system('cls')
-                print('''
-                =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                $$$$$$$$$^^^^^  Alat Panen dan Pascapanen    ^^^^^$$$$$$$$
-                __________________ SELAMAT BERBELANJA ___________________
-                ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|___________ Alat Panen dan Pascapanen __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk3:
-                    print(i,".",list_jenisproduk3[i])
-                pilih_produk3 = input("pilih produk: ")
-                produk = ""
+                    nama_produk, harga_produk = list_jenisproduk3[i]
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
+                pilih_produk3 = input("Pilih produk (1-5): ").strip()
             
                 if pilih_produk3 == "1":
                     produk = "Sabit"
@@ -1060,23 +1060,22 @@ def jenis_produk(username):
                     pembayaran()
                 else:
                     print("pilihan tidak tersedia")
-         elif search == "Pupuk" or search == "Benih" :
+
+         elif search == "pupuk" or search == "benih" :
                 os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|________________ Pupuk dan Benih _______________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk4:
                     nama_produk, harga_produk = list_jenisproduk4[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk4 = input("Pilih produk (1-5): ").strip()
-                
-                for i in list_jenisproduk4:
-                    print(i,".",list_jenisproduk4[i])
-                pilih_produk4 = input("pilih produk: ")
-                produk = ""
             
                 if pilih_produk4 == "1":
                     produk = "Pupuk Organik"
@@ -1134,23 +1133,22 @@ def jenis_produk(username):
                     print("Pilihan tidak tersedia!")
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
-         elif search == "Cocopeat" or search == "Kapur" :
+
+         elif search == "cocopeat" or search == "kapur" :
                 os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|________________ Pupuk dan Benih _______________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk4:
                     nama_produk, harga_produk = list_jenisproduk4[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk4 = input("Pilih produk (1-5): ").strip()
-                
-                for i in list_jenisproduk4:
-                    print(i,".",list_jenisproduk4[i])
-                pilih_produk4 = input("pilih produk: ")
-                produk = ""
             
                 if pilih_produk4 == "1":
                     produk = "Pupuk Organik"
@@ -1209,24 +1207,22 @@ def jenis_produk(username):
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
             
-         elif search == "Pestisida" or search == "Fungisida" :
+         elif search == "pestisida" or search == "fungisida" :
                 os.system('cls')
-                print('''
-        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-        __________________ SELAMAT BERBELANJA ___________________
-        ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|__________ Obat dan Perawatan Tanaman __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk5:
-                    nama_produk, harga_produk = list_jenisproduk3[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    nama_produk, harga_produk = list_jenisproduk5[i]
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk5 = input("Pilih produk (1-5): ").strip()
-                
-                for i in list_jenisproduk5:
-                    print(i,".",list_jenisproduk5[i])
-                pilih_produk5 = input("pilih produk: ")
-                produk = ""
-            
+
                 if pilih_produk5 == "1":
                     produk = "Pestisida Organik"
                     print("\nDetail Produk: ")
@@ -1283,24 +1279,23 @@ def jenis_produk(username):
                     print("Pilihan tidak tersedia!")
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
-         elif search == "Insektisida" or search == "Herbisida" :
+
+         elif search == "insektisida" or search == "herbisida" :
                 os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|__________ Obat dan Perawatan Tanaman __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk5:
-                    nama_produk, harga_produk = list_jenisproduk3[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    nama_produk, harga_produk = list_jenisproduk5[i]
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk5 = input("Pilih produk (1-5): ").strip()
-                
-                for i in list_jenisproduk5:
-                    print(i,".",list_jenisproduk5[i])
-                pilih_produk5 = input("pilih produk: ")
-                produk = ""
-            
+
                 if pilih_produk5 == "1":
                     produk = "Pestisida Organik"
                     print("\nDetail Produk: ")
@@ -1357,24 +1352,23 @@ def jenis_produk(username):
                     print("Pilihan tidak tersedia!")
                     input("Tekan Enter untuk kembali.")
                     jenis_produk(username)
-         elif search == "ZPT":
+
+         elif search == "zpt":
                 os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+                print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+                print("|            SELAMAT DATANG di TRIJAYA           |")
+                print("|__________ Obat dan Perawatan Tanaman __________|")
+
+                print("+-----+---------------------------+--------------+")
+                print("| No  | Nama Produk               | Harga (Rp)   |")
+                print("+-----+---------------------------+--------------+")
                 for i in list_jenisproduk5:
-                    nama_produk, harga_produk = list_jenisproduk3[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk}")
-                
+                    nama_produk, harga_produk = list_jenisproduk5[i]
+                    print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+                print("+-----+---------------------------+--------------+")
+
                 pilih_produk5 = input("Pilih produk (1-5): ").strip()
-                
-                for i in list_jenisproduk5:
-                    print(i,".",list_jenisproduk5[i])
-                pilih_produk5 = input("pilih produk: ")
-                produk = ""
-            
+
                 if pilih_produk5 == "1":
                     produk = "Pestisida Organik"
                     print("\nDetail Produk: ")
@@ -1434,21 +1428,19 @@ def jenis_produk(username):
             
     elif jenis == '4':
             os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+            print("|            SELAMAT DATANG di TRIJAYA           |")
+            print("|________________ Pupuk dan Benih _______________|")
+
+            print("+-----+---------------------------+--------------+")
+            print("| No  | Nama Produk               | Harga (Rp)   |")
+            print("+-----+---------------------------+--------------+")
             for i in list_jenisproduk4:
                 nama_produk, harga_produk = list_jenisproduk4[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk}")
-            
+                print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+            print("+-----+---------------------------+--------------+")
+
             pilih_produk4 = input("Pilih produk (1-5): ").strip()
-            
-            for i in list_jenisproduk4:
-                print(i,".",list_jenisproduk4[i])
-            pilih_produk4 = input("pilih produk: ")
-            produk = ""
         
             if pilih_produk4 == "1":
                 produk = "Pupuk Organik"
@@ -1509,21 +1501,19 @@ def jenis_produk(username):
            
     elif jenis == "5":   
             os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|")
+            print("|            SELAMAT DATANG di TRIJAYA           |")
+            print("|__________ Obat dan Perawatan Tanaman __________|")
+
+            print("+-----+---------------------------+--------------+")
+            print("| No  | Nama Produk               | Harga (Rp)   |")
+            print("+-----+---------------------------+--------------+")
             for i in list_jenisproduk5:
-                nama_produk, harga_produk = list_jenisproduk3[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk}")
-            
+                nama_produk, harga_produk = list_jenisproduk5[i]
+                print(f"| {i:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} |")
+            print("+-----+---------------------------+--------------+")
+
             pilih_produk5 = input("Pilih produk (1-5): ").strip()
-            
-            for i in list_jenisproduk5:
-                print(i,".",list_jenisproduk5[i])
-            pilih_produk5 = input("pilih produk: ")
-            produk = ""
         
             if pilih_produk5 == "1":
                 produk = "Pestisida Organik"
@@ -1581,6 +1571,8 @@ def jenis_produk(username):
                 print("Pilihan tidak tersedia!")
                 input("Tekan Enter untuk kembali.")
                 jenis_produk(username)
+    elif jenis == '7':
+        return home ()
            
 
 def keranjang(username, produk, harga):
@@ -1642,8 +1634,9 @@ def pembayaran(username, ongkir):
     keranjang_user = {}
 
     print(f"Keranjang {username}:")
-    print(f"{'Produk':<15} {'Harga':<10} {'Jumlah':<8} {'Total':<10}")
-    print("-" * 50)
+    print("+---------------------+-------------------+------------+-------------------+")
+    print("| Produk             | Harga (Rp)        | Jumlah     | Total (Rp)        |")
+    print("+---------------------+-------------------+------------+-------------------+")
 
     try:
         with open('KeranjangTRIJAYA.csv', mode='r') as file:
@@ -1653,7 +1646,7 @@ def pembayaran(username, ongkir):
             for row in reader:
                 if len(row) < 5:
                     continue
-                
+
                 user, produk, harga, jumlah, total = row
                 if user == username:
                     if produk in keranjang_user:
@@ -1663,21 +1656,20 @@ def pembayaran(username, ongkir):
                         keranjang_user[produk] = {
                             'harga': int(harga),
                             'jumlah': int(jumlah),
-                            'total': int(total) + int (ongkir),
+                            'total': int(total) + int(ongkir),
                         }
 
         for produk, data in keranjang_user.items():
-            print(f"{produk:<15} {data['harga']:<10} {data['jumlah']:<8} {data['total']:<10}")
+            print(f"| {produk:<19} | {data['harga']:>15,} | {data['jumlah']:>10} | {data['total']:>15,} |")
             total_belanja += data['total']
+
     except FileNotFoundError:
         print("Keranjang kosong. Silakan tambahkan produk terlebih dahulu.")
-        return
     except ValueError:
         print("Terjadi kesalahan pada format data keranjang.")
-        return
 
-    print("-" * 50)
-    print(f"Total Belanja: Rp{total_belanja}")
+    print("+---------------------+-------------------+------------+-------------------+")
+    print(f"Total Belanja: Rp{total_belanja:>15,}")
     print('''
     Pilih Metode Pembayaran:
     1. Bank Account
@@ -1746,20 +1738,6 @@ def kosongkan_keranjang(username):
     jenis_produk(username)
     kosongkan_keranjang(username)
 
-
-# def voucher():
-#     voucher = ()
-#     if voucher == "TR1J4Y4" :
-#         print ("VOUCHER BERHASIL, KAMU MENDAPATKAN VOUCHER SEBESAR 5%")
-#         harga_total = harga - harga * 0.05
-#         print (harga_total)
-#     elif voucher == "W1NS4C0M3L":
-#         print ("VOUCHER BERHASIL, KAMU MENDAPATKAN VOUCHER SEBESAR 5%")
-#         harga_total = harga - harga * 0.05
-#         print (harga_total)
-#     elif voucher == "":
-#         pass
-
 def data_pengiriman():
     os.system('cls')
     
@@ -1818,9 +1796,6 @@ def data_pengiriman():
         if not provinsi_found:
             print(f"Provinsi {provinsi_pembeli} tidak ditemukan dalam daftar.")
             return None
-        
-
-
 
 # def voucher():
 #     voucher = ()
@@ -1834,10 +1809,6 @@ def data_pengiriman():
 #         print (harga_total)
 #     elif voucher == "":
 #         pass
-
-
-
-
 
 def main():
     home()
