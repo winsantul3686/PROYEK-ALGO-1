@@ -283,9 +283,44 @@ def jenis_produk(username):
             print("Masukkan pilihan!")
             input("tekan enter untuk kembali")
             jenis_produk(username)
-        elif pilih_produk1 in list_jenisproduk1:  # Memastikan pilihan valid
-            produk, harga = list_jenisproduk1[pilih_produk1]  # Mengambil produk dan harga
-            print(f"\n{produk} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
+        elif pilih_produk1 == "1":
+                produk = "Cangkul"
+                print("\nDetail Produk: ")
+                print('''
+                Deskripsi Produk: Alat tanam serbaguna dari baja yang tahan lama
+                Spesifikasi: Material -> Baja tahan karat,Pegangan -> Kayu ergonomis
+                Harga: Rp 50.000''')
+        elif pilih_produk1 == "2":
+                    produk = "Sekop"
+                    print("\nDetail Produk: ")
+                    print('''
+                    Deskripsi Produk: Alat berbahan ringan dengan pegangan ergonomis
+                    Spesifikasi: Material -> Baja ringan, Pegangan -> Plastik anti selip
+                    Harga: Rp 40.000''')
+        elif pilih_produk1 == "3":
+                    produk = "Garpu Tanah"
+                    print("\nDetail Produk: ")
+                    print('''
+                    Deskripsi: Alat tajam dan kuat untuk melonggarkan tanah
+                    Spesifikasi: Material -> Baja, Pegangan -> Kayu solid, Dimensi: 25 cm
+                    Harga: Rp 30.000''')
+        elif pilih_produk1 == "4":
+                    produk = "Penugal Tanam Manual"
+                    print("\nDetail Produk: ")
+                    print('''
+                    Deskripsi: Alat sederhana untuk membuat lubang tanam
+                    Spesifikasi: Material -> Logam tahan karat, Panjang -> 30 cm
+                    Harga: Rp 30.000''')
+        elif pilih_produk1 == "5":
+                    produk = "Ember Plastik"
+                    print("\nDetail Produk: ")
+                    print('''
+                    Deskripsi: Ember ringan untuk mengangkut air atau material lainnya
+                    Spesifikasi: Material -> Plastik tebal, Kapasitas -> 10 liter
+                    Harga: Rp 15.000''')
+        if pilih_produk1 in list_jenisproduk1:  # Memastikan pilihan valid
+            produk, harga, stok = list_jenisproduk1[pilih_produk1]  # Mengambil produk dan harga
+            print(f"\n{produk} stok: {stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
             print('''
             A. Masukkan keranjang
             B. Beli dan bayar
@@ -299,10 +334,10 @@ def jenis_produk(username):
             else:
                 print("Pilihan tidak tersedia. Kembali ke menu.")
                 jenis_produk(username)
-        else:
-            print("Pilihan tidak tersedia!")
-            input("Tekan Enter untuk kembali.")
-            jenis_produk(username)
+        # else:
+        #     print("Pilihan tidak tersedia!")
+        #     input("Tekan Enter untuk kembali.")
+        #     jenis_produk(username)
     elif jenis == '2':
             os.system('cls')
             print('''
