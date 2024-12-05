@@ -1,6 +1,6 @@
-ID,Nama Produk,Harga,Stok
-1,Cangkul,50000,20
-2,Sekop,40000,30
-3,Garpu Tanah,30000,15
-4,Penugal Tanam Manual,30000,25
-5,Ember Plastik,15000,50
+nama_produk,harga_produk,stok_produk
+Cangkul,50000,20
+Sekop,40000,30
+Garpu Tanah,30000,15
+Penugal Tanam Manual,30000,25
+Ember Plastik,15000,50

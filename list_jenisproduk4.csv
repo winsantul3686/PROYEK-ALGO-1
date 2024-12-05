@@ -1,6 +1,6 @@
-ID,Nama Produk,Harga,Stok
-1,Pupuk Organik,35000,50
-2,Pupuk Urea,100000,20
-3,Benih Sayuran (1 paket),20000,100
-4,Cocopeat,25000,30
-5,Kapur Dolomit,20000,25
+produk,Harga,Stok
+Pupuk Organik,35000,50
+Pupuk Urea,100000,20
+Benih Sayuran (1 paket),20000,100
+Cocopeat,25000,30
+Kapur Dolomit,20000,25

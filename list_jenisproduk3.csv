@@ -1,6 +1,6 @@
-ID,Nama Produk,Harga,Stok
-1,Sabit,50000,12
-2,Pisau Panen,25000,40
-3,Keranjang Panen Plastik,30000,20
-4,Timbangan Digital,150000,8
-5,Kantong Plastik Panen (10 pcs),30000,100
+produk,Harga,Stok
+Sabit,50000,12
+Pisau Panen,25000,40
+Keranjang Panen Plastik,30000,20
+Timbangan Digital,150000,8
+Kantong Plastik Panen (10 pcs),30000,100
