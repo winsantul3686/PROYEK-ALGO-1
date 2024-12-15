@@ -1,6 +1,6 @@
-produk,Harga,Stok
-Pestisida Organik,50000,18
-Fungisida Cair,70000,10
-Insektisida,65000,15
-Herbisida,80000,12
-ZPT (Zat Pengatur Tumbuh),90000,20
+ID,Nama_Produk,Harga,Stok,Deskripsi,Spesifikasi
+1,Pestisida Organik, 60000, 30, Pestisida alami untuk mengendalikan hama pada tanaman, Kandungan Ekstrak tumbuhan dengan Volume 500 ml
+2,Fungisida Cair, 40000, 30, Obat cair efektif untuk mencegah jamur pada tanaman, Volume 500 ml dengan Kandungan Fungisida alami
+3,Insektisida, 50000, 30,  Produk kimia untuk mengatasi serangga pengganggu, Kandungan Insektisida sintetik dengan Volume: 250 ml
+4,Herbisida, 45000, 30, Pengendali gulma yang efektif untuk melindungi tanaman, Volume 500 ml dengan Kandungan Herbisida sistemik
+5,ZPT, 35000, 30, ZPT adalah Zat Pengatur Tumbuh merupakan Larutan untuk merangsang pertumbuhan tanaman, Volume 100 ml dengan Kandungan ZPT alami
