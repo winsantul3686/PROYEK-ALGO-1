@@ -1,6 +1,6 @@
-produk,Harga,Stok
-Pupuk Organik,35000,50
-Pupuk Urea,100000,20
-Benih Sayuran (1 paket),20000,100
-Cocopeat,25000,30
-Kapur Dolomit,20000,25
+ID,Nama_Produk,Harga,Stok,Deskripsi,Spesifikasi
+1,Pupuk Organik, 35000, 30, Pupuk alami untuk meningkatkan kesuburan tanah, Berat 1 kg dengan Bahan Kompos organik
+2,Pupuk Urea, 100000, 30, Pupuk kimia untuk mempercepat pertumbuhan tanaman, Berat 2 kg dengan Kandungan Nitrogen tinggi
+3,Benih Sayuran (1 paket), 20000, 30, Paket benih berkualitas untuk berbagai sayuran, Isi 50 gram dengan Jenis Aneka sayuran
+4,Cocopeat, 25000, 30, Media tanam serbaguna dari serbuk kelapa, Berat 1 kg dengan Material Serbuk kelapa
+5,Kapur Dolomit, 20000, 30, Bahan alami untuk menetralkan pH tanah, Berat 1 kg dengan Material Kapur murni
