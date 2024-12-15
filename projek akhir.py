@@ -1,4 +1,3 @@
-
 import pandas as pd
 import csv
 import os 
@@ -11,67 +10,11 @@ list_jenisproduk = {
    5:"Obat dan Perawatan Tanaman",
    6:"Pencarian",
    7:"Kembali"
- }
-
-list_jenisproduk1 = {
-    "1": ("Cangkul", 50000, 20),
-    "2": ("Sekop", 40000, 30),
-    "3": ("Garpu Tanah", 30000, 15),
-    "4": ("Penugal Tanam Manual", 30000, 25),
-    "5": ("Ember Plastik", 15000, 50)
-}
-list_jenisproduk2 = {
-    "1": ("Gembor", 45000, 20),
-    "2": ("Gunting Dahan", 60000, 10),
-    "3": ("Sprayer Manual", 70000, 15),
-    "4": ("Pemangkas Tunas Kecil", 40000, 25),
-    "5": ("Alat Pencabut Rumput", 35000, 30)
-}
-list_jenisproduk3 = {
-    "1": ("Sabit", 50000, 12),
-    "2": ("Pisau Panen", 25000, 40),
-    "3": ("Keranjang Panen Plastik", 30000, 20),
-    "4": ("Timbangan Digital", 150000, 8),
-    "5": ("Kantong Plastik Panen (10 pcs)", 30000, 100)
-}
-list_jenisproduk4 = {
-    "1": ("Pupuk Organik", 35000, 50),
-    "2": ("Pupuk Urea", 100000, 20),
-    "3": ("Benih Sayuran (1 paket)", 20000, 100),
-    "4": ("Cocopeat", 25000, 30),
-    "5": ("Kapur Dolomit", 20000, 25)
-}
-list_jenisproduk5 = {
-    "1": ("Pestisida Organik", 50000, 18),
-    "2": ("Fungisida Cair", 70000, 10),
-    "3": ("Insektisida", 65000, 15),
-    "4": ("Herbisida", 80000, 12),
-    "5": ("ZPT (Zat Pengatur Tumbuh)", 90000, 20)
 }
 
 def home():
-    os.system('cls' if os.name == 'nt' else 'clear') 
+    os.system('cls') 
     print('''
-        ░██████╗███████╗██╗░░░░░░█████╗░███╗░░░███╗░█████╗░████████╗
-        ██╔════╝██╔════╝██║░░░░░██╔══██╗████╗░████║██╔══██╗╚══██╔══╝
-        ╚█████╗░█████╗░░██║░░░░░███████║██╔████╔██║███████║░░░██║░░░
-        ░╚═══██╗██╔══╝░░██║░░░░░██╔══██║██║╚██╔╝██║██╔══██║░░░██║░░░
-        ██████╔╝███████╗███████╗██║░░██║██║░╚═╝░██║██║░░██║░░░██║░░░
-        ╚═════╝░╚══════╝╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
-
-        ██████╗░░█████╗░████████╗░█████╗░███╗░░██╗░██████╗░  
-        ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗████╗░██║██╔════╝░  
-        ██║░░██║███████║░░░██║░░░███████║██╔██╗██║██║░░██╗░  
-        ██║░░██║██╔══██║░░░██║░░░██╔══██║██║╚████║██║░░╚██╗  
-        ██████╔╝██║░░██║░░░██║░░░██║░░██║██║░╚███║╚██████╔╝  
-        ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░  
-
-        ██████╗░██╗
-        ██╔══██╗██║
-        ██║░░██║██║
-        ██║░░██║██║
-        ██████╔╝██║
-        ╚═════╝░╚═╝
 
         ████████╗██████╗░██╗░░░░░██╗░█████╗░██╗░░░██╗░█████╗░
         ╚══██╔══╝██╔══██╗██║░░░░░██║██╔══██╗╚██╗░██╔╝██╔══██╗
@@ -81,15 +24,15 @@ def home():
         ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝
         ''')
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-    print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
+    print("                SELAMAT DATANG di TRIJAYA               ")
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     print("""
-          [1] Register
-          [2] Login
-          [3] Admin Login
-          [4] Exit
+        [1] Register
+        [2] Login
+        [3] Admin Login
+        [4] Exit
     """)
-    print("----------------------------------------------------------")
+    print("--------------------------------------------------------")
     
     home1 = input("Pilih fitur (1/2/3/4): ")
     if home1 == "1":
@@ -100,17 +43,18 @@ def home():
         login_admin()
     elif home1 == "4":
         print("Terima kasih telah menggunakan aplikasi TRIJAYA! Sampai jumpa.")
+        exit ()
     else:
         print("Pilihan tidak tersedia, coba lagi.")
-        input()
+        input("Tekan enter untuk kembali!")
         home()  
 
 def register():
-    os.system('cls' if os.name == 'nt' else 'clear') 
+    os.system('cls') 
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-    print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
+    print("                SELAMAT DATANG di TRIJAYA               ")
     print("______________________  REGISTER  ______________________")
-    print("----------------------------------------------------------")
+    print (" ")
     
     username = input("Masukkan username anda: ").strip()
     password = input("Masukkan password anda: ").strip()
@@ -125,83 +69,106 @@ def register():
         input("klik enter untuk kembali")
         home()
 
+    if username in df['username'].values:
+        print("Username sudah terdaftar. Silakan gunakan username lain.")
+        input("klik enter untuk kembali")
+        home()
+
     new_data = pd.DataFrame({'username': [username], 'password': [password]})
     new_data.to_csv('RegTRIJAYA.csv', mode='a', index=False, header=False)
-    return home()
+    print("Registrasi berhasil! Selamat datang di TRIJAYA.")
+    input("klik enter untuk kembali")
+    home()
 
 def login():
-    os.system('cls' if os.name == 'nt' else 'clear') 
+    os.system('cls')
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-    print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
+    print("                SELAMAT DATANG di TRIJAYA               ")
     print("________________________ LOGIN _________________________")
-    print("----------------------------------------------------------")
+    print(" ")
 
     username = input("Masukkan username: ").strip()
     password = input("Masukkan password: ").strip()
 
-    if not os.path.isfile('RegTRIJAYA.csv'):
-        print("Akun tidak terdaftar. Silakan daftar terlebih dahulu!")
-        input("Tekan Enter untuk kembali ke menu utama...")
-        return None
+    try:
+        df = pd.read_csv('RegTRIJAYA.csv')
+    except FileNotFoundError:
+        print("Data pengguna tidak ditemukan. Silakan daftar terlebih dahulu!")
+        input("Tekan Enter untuk kembali...")
+        home()
 
-    with open('RegTRIJAYA.csv', mode='r') as file:
-        reader = csv.DictReader(file)
+    matched_user = df[(df['username'] == username) & (df['password'] == password)]
 
-        for row in reader:
-            if row['username'] == username and row['password'] == password:
-                print(f"Selamat datang, {username}!")
-                print("----------------------------------------------------------")
-                jenis_produk(username)
-                return username
-
-        print("Login gagal! Username atau password salah.")
-        print("----------------------------------------------------------")
+    if not matched_user.empty:
+        print(f"Login berhasil! Selamat datang, {username}.")
+        jenis_produk(username) 
+    else:
+        print("Username atau password salah. Silakan coba lagi!")
         input("Tekan Enter untuk mencoba lagi...")
         home()
-        return None
-                
-       
+    
+
 def login_admin():
-    os.system('cls' if os.name == 'nt' else 'clear') 
+    os.system('cls')
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-    print("$$$$$$$$$^^^^^  SELAMAT DATANG di TRIJAYA  ^^^^^$$$$$$$$")
-    print("______________________  ADMIN LOGIN  ______________________")
-    print("----------------------------------------------------------")
+    print("                SELAMAT DATANG di TRIJAYA               ")
+    print("______________________  ADMIN LOGIN  ___________________")
+    print (" ")
 
     username = input("Masukkan username: ").strip()
     password = input("Masukkan password: ").strip()
-
-    if not os.path.isfile('admin.csv'):
-        print("Akun admin tidak terdaftar. Silakan daftar terlebih dahulu!")
-        input("Tekan Enter untuk kembali ke menu utama...")
-        return None
 
     df = pd.read_csv('admin.csv')
     matched_admin = df[(df['username'] == username) & (df['password'] == password)]
 
     if not matched_admin.empty:
-        print(f"Selamat datang, Admin {username}!")
-        print("----------------------------------------------------------")
-        ubah_stok()
+        menu_admin (username)
     else:
         print("Login gagal! Username atau password salah.")
         print("----------------------------------------------------------")
         input("Tekan Enter untuk mencoba lagi...")
-        return None
-def ubah_stok():
+        home ()
+    
+def menu_admin(username):
+    os.system ("cls")
+    print(f"Selamat datang, Admin {username}!")
+    print("----------------------------------------------------------")
+    print("1. Ubah Stok")
+    print("2. Ubah harga")
+    print("3. tambah produk")
+    print("4. Hapus Produk")
+    print("5. Ubah Nama")
+    print("6. Kembali")
+    pilih_admin = input("Masukkan pilihan: ")
+    if pilih_admin == '1':
+        ubah_stok(username)
+    elif pilih_admin == '2':
+        ubah_harga(username)
+    elif pilih_admin == '3':
+        tambah_produk(username)
+    elif pilih_admin == '4':
+        hapus_produk(username)
+    elif pilih_admin == '5':
+        ubah_nama(username)
+    elif pilih_admin == "6":
+        home ()
+    else:
+        print ("input salah")
+        input ("tekan enter untuk kembali")
+        menu_admin (username)
+    
+def hapus_produk(username):
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("\n=-=-=-=-=-=-=-= UBAH STOK PRODUK =-=-=-=-=-=-=-=")
+    print("\n=-=-=-=-=-=-=-= HAPUS PRODUK =-=-=-=-=-=-=-=")
 
-    # Daftar produk dalam dictionary
-    produk_dict = {
-        "1": list_jenisproduk1,
-        "2": list_jenisproduk2,
-        "3": list_jenisproduk3,
-        "4": list_jenisproduk4,
-        "5": list_jenisproduk5
+    kategori_dict = {
+        "1": "list_jenisproduk1.csv",
+        "2": "list_jenisproduk2.csv",
+        "3": "list_jenisproduk3.csv",
+        "4": "list_jenisproduk4.csv",
+        "5": "list_jenisproduk5.csv"
     }
 
-    # Menampilkan kategori
     print("\nKategori Produk:")
     print("1. Alat Tanam")
     print("2. Alat Perawatan")
@@ -209,38 +176,368 @@ def ubah_stok():
     print("4. Pupuk dan Media Tanam")
     print("5. Obat-Obatan dan ZPT")
 
-    # Memilih kategori
-    kategori = input("\nMasukkan nomor kategori produk yang ingin diubah: ").strip()
-    if kategori not in produk_dict:
+    kategori = input("\nMasukkan nomor kategori produk yang ingin dihapus: ").strip()
+
+    if kategori not in kategori_dict:
         print("Kategori tidak valid!")
-        return
+        input("Tekan Enter untuk kembali.")
+        menu_admin (username)
 
-    # Mendapatkan produk dalam kategori
-    produk = produk_dict[kategori]
-    print("\nProduk dalam kategori:")
-    for key, value in produk.items():
-        print(f"{key}. {value[0]} (Harga: {value[1]}, Stok: {value[2]})")
+    file_path = kategori_dict[kategori]
 
-    # Memilih produk
-    produk_id = input("\nMasukkan ID produk yang ingin diubah: ").strip()
-    if produk_id not in produk:
-        print("ID produk tidak valid!")
-        return
     try:
-        stok_baru = int(input(f"Masukkan stok baru untuk produk '{produk[produk_id][0]}': "))
-        produk[produk_id] = (produk[produk_id][0], produk[produk_id][1], stok_baru)
-        print(f"Stok untuk '{produk[produk_id][0]}' berhasil diperbarui menjadi {stok_baru}.")
-        input("Klik enter untuk kembali")
-        home()
+        df = pd.read_csv(file_path)
+    except FileNotFoundError:
+        print(f"File {file_path} tidak ditemukan!")
+        input("Tekan Enter untuk kembali.")
+        hapus_produk(username)
+   
+    if df.empty:
+        print("Daftar produk kosong! Tidak ada yang bisa dihapus.")
+        input("Tekan Enter untuk kembali.")
+        hapus_produk (username)
+
+    print("\nDaftar Produk:")
+    print("+-----+---------------------------+--------------+----------+")
+    print("| ID  | Nama Produk               | Harga (Rp)   | Stok     |")
+    print("+-----+---------------------------+--------------+----------+")
+    for _, row in df.iterrows():
+        print(f"| {row['ID']:<3} | {row['Nama_Produk']:<25} | Rp{row['Harga']:>10,} | {row['Stok']:>8} |")
+    print("+-----+---------------------------+--------------+----------+")
+
+    try:
+        id_produk = int(input("Masukkan ID produk yang ingin dihapus: ").strip())
+        if id_produk not in df["ID"].values:
+            print(f"ID produk {id_produk} tidak ditemukan!")
+            input("Tekan Enter untuk kembali.")
+            hapus_produk (username)
+
+        konfirmasi = input("Apakah Anda yakin ingin menghapus produk ini? (y/n): ").strip().lower()
+        if konfirmasi == 'n':
+            print("Penghapusan dibatalkan.")
+            input("Tekan Enter untuk kembali.")
+            menu_admin (username)
+
+        elif konfirmasi != "y":
+            print ("Pilihan tidak tersedia")
+            input ("Tekan Enter untuk kembali.")
+            hapus_produk (username)
+
+        df = df[df["ID"] != id_produk]
+
+        df.reset_index(drop=True, inplace=True)
+        df["ID"] = df.index + 1
+
+        df.to_csv(file_path, index=False)
+        print(f"\nProduk dengan ID {id_produk} berhasil dihapus.")
+        input("Tekan Enter untuk kembali.")
+        menu_admin (username)
+    except ValueError:
+        print("Input tidak valid! ID produk harus berupa angka.")
+        input("Tekan Enter untuk kembali.")
+        hapus_produk (username)
+
+def tambah_produk(username):
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n=-=-=-=-=-=-=-= TAMBAH PRODUK BARU =-=-=-=-=-=-=-=")
+
+    kategori_dict = {
+        "1": "list_jenisproduk1.csv",
+        "2": "list_jenisproduk2.csv",
+        "3": "list_jenisproduk3.csv",
+        "4": "list_jenisproduk4.csv",
+        "5": "list_jenisproduk5.csv"
+    }
+
+    print("\nKategori Produk:")
+    print("1. Alat Tanam")
+    print("2. Alat Perawatan")
+    print("3. Alat Panen")
+    print("4. Pupuk dan Media Tanam")
+    print("5. Obat-Obatan dan ZPT")
+
+    kategori = input("\nMasukkan nomor kategori produk yang ingin ditambahkan: ").strip()
+
+    if kategori not in kategori_dict:
+        print("Kategori tidak valid!")
+        input("Tekan Enter untuk kembali.")
+        menu_admin (username)
+
+    file_path = kategori_dict[kategori]
+
+    try:
+        df = pd.read_csv(file_path)
+    except FileNotFoundError:
+        print(f"File {file_path} tidak ditemukan!")
+        input("Tekan Enter untuk kembali.")
+        return
+
+    try:
+        print("\nMasukkan detail produk baru:")
+        nama_produk = input("Nama Produk: ").strip()
+        if not nama_produk:
+            print("Nama produk tidak boleh kosong!")
+            tambah_produk (username)
+
+        harga_produk = int(input("Harga Produk (Rp): "))
+        stok_produk = int(input("Stok Produk: "))
+        des_produk = input ("Masukkan Deskripsi Produk: ")
+        spek_produk = input ("Masukkan Spek Produk: ")
+
+        if not df.empty:
+            id_produk = df["ID"].max() + 1
+        else:
+            id_produk = 1
+
+        df.loc[len(df)] = [id_produk, nama_produk, harga_produk, stok_produk, des_produk, spek_produk]
+
+        df.to_csv(file_path, index=False)
+        print(f"\nProduk '{nama_produk}' berhasil ditambahkan dengan ID {id_produk}.")
+        input("Tekan Enter untuk kembali.")
+        menu_admin (username)
+    except ValueError:
+        print("Input tidak valid! Harga dan stok harus berupa angka.")
+        input("Tekan Enter untuk kembali.")
+        tambah_produk (username)
+
+def ubah_nama(username):
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n=-=-=-=-=-=-=-= UBAH HARGA PRODUK =-=-=-=-=-=-=-=")
+
+    kategori_dict = {
+        "1": "list_jenisproduk1.csv",
+        "2": "list_jenisproduk2.csv",
+        "3": "list_jenisproduk3.csv",
+        "4": "list_jenisproduk4.csv",
+        "5": "list_jenisproduk5.csv"
+    }
+
+    print("\nKategori Produk:")
+    print("1. Alat Tanam")
+    print("2. Alat Perawatan")
+    print("3. Alat Panen")
+    print("4. Pupuk dan Media Tanam")
+    print("5. Obat-Obatan dan ZPT")
+
+    kategori = input("\nMasukkan nomor kategori produk yang ingin diubah: ").strip()
+
+    if kategori not in kategori_dict:
+        print("Kategori tidak valid!")
+        input("Tekan Enter untuk kembali.")
+        menu_admin (username)
+
+    file_path = kategori_dict[kategori]
+
+    try:
+        df = pd.read_csv(file_path)
+    except FileNotFoundError:
+        print(f"File {file_path} tidak ditemukan!")
+        input("Tekan Enter untuk kembali.")
+        return 
+
+    print("\nProduk dalam kategori:")
+    print("+-----+---------------------------+--------------+----------+")
+    print("| ID  | Nama Produk               | Harga (Rp)   | Stok     |")
+    print("+-----+---------------------------+--------------+----------+")
+    for _, row in df.iterrows():
+        print(f"| {row['ID']:<3} | {row['Nama_Produk']:<25} | Rp{row['Harga']:>10,} | {row['Stok']:>8} |")
+    print("+-----+---------------------------+--------------+----------+")
+
+    produk_id = input("\nMasukkan ID produk yang ingin diubah: ").strip()
+
+    if not produk_id.isdigit() or int(produk_id) not in df["ID"].values:
+        print("ID produk tidak valid!")
+        input("Tekan Enter untuk kembali.")
+        ubah_nama (username)
+
+    try:
+        nama_baru = (input(f"Masukkan nama baru untuk produk '{df[df['ID'] == int(produk_id)]['Nama_Produk'].values[0]}': "))
     except ValueError:
         print("Input tidak valid! Stok harus berupa angka.")
+        input("Tekan Enter untuk kembali.")
+        ubah_nama (username)
+
+    df.loc[df["ID"] == int(produk_id), "Nama_Produk"] = nama_baru
+
+    df.to_csv(file_path, index=False)
+    print(f"Nama untuk produk dengan ID {produk_id} berhasil diperbarui menjadi {nama_baru}.")
+    input("Tekan Enter untuk kembali.")
+    menu_admin (username)
+
+def ubah_harga(username):
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n=-=-=-=-=-=-=-= UBAH HARGA PRODUK =-=-=-=-=-=-=-=")
+
+    kategori_dict = {
+        "1": "list_jenisproduk1.csv",
+        "2": "list_jenisproduk2.csv",
+        "3": "list_jenisproduk3.csv",
+        "4": "list_jenisproduk4.csv",
+        "5": "list_jenisproduk5.csv"
+    }
+
+    print("\nKategori Produk:")
+    print("1. Alat Tanam")
+    print("2. Alat Perawatan")
+    print("3. Alat Panen")
+    print("4. Pupuk dan Media Tanam")
+    print("5. Obat-Obatan dan ZPT")
+
+    kategori = input("\nMasukkan nomor kategori produk yang ingin diubah: ").strip()
+
+    if kategori not in kategori_dict:
+        print("Kategori tidak valid!")
+        input("Tekan Enter untuk kembali.")
+        menu_admin (username)
+
+    file_path = kategori_dict[kategori]
+
+    try:
+        df = pd.read_csv(file_path)
+    except FileNotFoundError:
+        print(f"File {file_path} tidak ditemukan!")
+        input("Tekan Enter untuk kembali.")
+        return 
+
+    print("\nProduk dalam kategori:")
+    print("+-----+---------------------------+--------------+----------+")
+    print("| ID  | Nama Produk               | Harga (Rp)   | Stok     |")
+    print("+-----+---------------------------+--------------+----------+")
+    for _, row in df.iterrows():
+        print(f"| {row['ID']:<3} | {row['Nama_Produk']:<25} | Rp{row['Harga']:>10,} | {row['Stok']:>8} |")
+    print("+-----+---------------------------+--------------+----------+")
+
+    produk_id = input("\nMasukkan ID produk yang ingin diubah: ").strip()
+
+    if not produk_id.isdigit() or int(produk_id) not in df["ID"].values:
+        print("ID produk tidak valid!")
+        input("Tekan Enter untuk kembali.")
+        ubah_harga (username)
+
+    try:
+        harga_baru = int(input(f"Masukkan harga baru untuk produk '{df[df['ID'] == int(produk_id)]['Harga'].values[0]}': "))
+    except ValueError:
+        print("Input tidak valid! Stok harus berupa angka.")
+        input("Tekan Enter untuk kembali.")
+        ubah_harga (username)
+
+    df.loc[df["ID"] == int(produk_id), "Harga"] = harga_baru
+
+    df.to_csv(file_path, index=False)
+    print(f"Harga untuk produk dengan ID {produk_id} berhasil diperbarui menjadi {harga_baru}.")
+    input("Tekan Enter untuk kembali.")
+    menu_admin (username) 
+
+def ubah_stok(username):
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n=-=-=-=-=-=-=-= UBAH STOK PRODUK =-=-=-=-=-=-=-=")
+
+    kategori_dict = {
+        "1": "list_jenisproduk1.csv",
+        "2": "list_jenisproduk2.csv",
+        "3": "list_jenisproduk3.csv",
+        "4": "list_jenisproduk4.csv",
+        "5": "list_jenisproduk5.csv"
+    }
+
+    print("\nKategori Produk:")
+    print("1. Alat Tanam")
+    print("2. Alat Perawatan")
+    print("3. Alat Panen")
+    print("4. Pupuk dan Media Tanam")
+    print("5. Obat-Obatan dan ZPT")
+
+    kategori = input("\nMasukkan nomor kategori produk yang ingin diubah: ").strip()
+
+    if kategori not in kategori_dict:
+        print("Kategori tidak valid!")
+        input("Tekan Enter untuk kembali.")
+        menu_admin (username)
+
+    file_path = kategori_dict[kategori]
+    try:
+        df = pd.read_csv(file_path)
+    except FileNotFoundError:
+        print(f"File {file_path} tidak ditemukan!")
+        input("Tekan Enter untuk kembali.")
+        return 
+
+    print("\nProduk dalam kategori:")
+    print("+-----+---------------------------+--------------+----------+")
+    print("| ID  | Nama Produk               | Harga (Rp)   | Stok     |")
+    print("+-----+---------------------------+--------------+----------+")
+    for _, row in df.iterrows():
+        print(f"| {row['ID']:<3} | {row['Nama_Produk']:<25} | Rp{row['Harga']:>10,} | {row['Stok']:>8} |")
+    print("+-----+---------------------------+--------------+----------+")
+
+    produk_id = input("\nMasukkan ID produk yang ingin diubah: ").strip()
+
+    if not produk_id.isdigit() or int(produk_id) not in df["ID"].values:
+        print("ID produk tidak valid!")
+        input("Tekan Enter untuk kembali.")
+        ubah_stok (username)
+
+    try:
+        stok_baru = int(input(f"Masukkan stok baru untuk produk '{df[df['ID'] == int(produk_id)]['Nama_Produk'].values[0]}': "))
+    except ValueError:
+        print("Input tidak valid! Stok harus berupa angka.")
+        input("Tekan Enter untuk kembali.")
+        ubah_stok (username)
+
+    df.loc[df["ID"] == int(produk_id), "Stok"] = stok_baru
+
+    df.to_csv(file_path, index=False)
+    print(f"Stok untuk produk dengan ID {produk_id} berhasil diperbarui menjadi {stok_baru}.")
+    input("Tekan Enter untuk kembali.")
+    menu_admin (username)
+
 def data_pengiriman():
     os.system('cls')
     print("======= DATA PENGIRIMAN =======")
     nama_pembeli = input ("Masukkan Nama: ")
-    provinsi_pembeli = input ("Masukkan Provinsi: ")
+    if not nama_pembeli:
+        input ("nama harus di isi!")
+        data_pengiriman ()
+
     alamat_pembeli = input ("Masukkan Alamat: ")
+    if not alamat_pembeli:
+        input ("Alamat harus di isi!")
+        data_pengiriman ()
+
+    provinsi_pembeli = input ("Masukkan Provinsi: ")
+    if not provinsi_pembeli:
+        input ("Provinsi harus di isi cth: Bali")
+        data_pengiriman ()
+    
     no_pembeli = input ("Masukkan Nomor HP: ")
+    if not no_pembeli:
+        input ("nomor harus di isi!") 
+        data_pengiriman ()
+
+    try:
+        df = pd.read_csv('provinsi.csv')
+    except FileNotFoundError:
+        print("Error: File provinsi.csv tidak ditemukan.")
+        input("Klik Enter untuk keluar.")
+        return
+    except Exception as e:
+        print(f"Terjadi kesalahan: {e}")
+        input("Klik Enter untuk keluar.")
+        return
+
+    try:
+        sama_provinsi = df[df['provinsi'].str.lower() == provinsi_pembeli.lower()]
+        if sama_provinsi.empty:
+            print(f"Provinsi {provinsi_pembeli} tidak ditemukan dalam daftar.")
+            input("Klik Enter untuk mengisi data kembali.")
+            return data_pengiriman()
+        # else:
+        #     ongkir = sama_provinsi['ongkir'].values[0]
+        #     print(f"Ongkir untuk wilayah {provinsi_pembeli} adalah {ongkir}.")
+    except KeyError as e:
+        print(f"Kolom tidak ditemukan dalam file: {e}")
+        input("Klik Enter untuk keluar.")
+        data_pengiriman ()
 
     print ('''
     PILIH OPSI KURIR:
@@ -251,109 +548,364 @@ def data_pengiriman():
            ''')
     kurir = input ("Pilih Opsi Kurir: ")
     if kurir == "1":
+        os.system('cls')
         print ("Pengriman Menggunakan JNE, dengan nama", nama_pembeli ,)
-        print ("Provinsi: ", provinsi_pembeli)
-        print ("Alamat: ", alamat_pembeli)
-        print ("Nomor HP: ", no_pembeli)
+        # print ("Provinsi: ", provinsi_pembeli)
+        # print ("Alamat: ", alamat_pembeli)
+        # print ("Nomor HP: ", no_pembeli)
 
     elif kurir == "2":
+        os.system ('cls')
         print ("Pengriman Menggunakan SiCepat Express, dengan nama", nama_pembeli ,)
-        print ("Provinsi: ", provinsi_pembeli)
-        print ("Alamat: ", alamat_pembeli)
-        print ("Nomor HP: ", no_pembeli)
+        # print ("Provinsi: ", provinsi_pembeli)
+        # print ("Alamat: ", alamat_pembeli)
+        # print ("Nomor HP: ", no_pembeli)
     
     elif kurir == "3":
+        os.system ("cls")
         print ("Pengriman Menggunakan JNT, dengan nama", nama_pembeli ,)
-        print ("Provinsi: ", provinsi_pembeli)
-        print ("Alamat: ", alamat_pembeli)
-        print ("Nomor HP: ", no_pembeli)
+        # print ("Provinsi: ", provinsi_pembeli)
+        # print ("Alamat: ", alamat_pembeli)
+        # print ("Nomor HP: ", no_pembeli)
     
     elif kurir == "4":
+        os.system('cls')
         print ("Pengriman Menggunakan Trijaya Express, dengan nama", nama_pembeli ,)
-        print ("Provinsi: ", provinsi_pembeli)
-        print ("Alamat: ", alamat_pembeli)
-        print ("Nomor HP: ", no_pembeli)
+        # print ("Provinsi: ", provinsi_pembeli)
+        # print ("Alamat: ", alamat_pembeli)
+        # print ("Nomor HP: ", no_pembeli)
 
     elif not os.path.isfile('provinsi.csv'): 
         print("Wilayah Tidak Tersedia!.")
         return None
     
-    df = pd.read_csv('provinsi.csv')
-    matched_provinsi = df[df['provinsi'].str.lower() == provinsi_pembeli.lower()]
+    print ("Provinsi: ", provinsi_pembeli)
+    print ("Alamat: ", alamat_pembeli)
+    print ("Nomor HP: ", no_pembeli)
 
-    if not matched_provinsi.empty:
-        ongkir = matched_provinsi['ongkir'].values[0] 
+    # df = pd.read_csv('provinsi.csv')
+    sama_provinsi = df[df['provinsi'].str.lower() == provinsi_pembeli.lower()]
+
+    if not sama_provinsi.empty:
+        ongkir = sama_provinsi['ongkir'].values[0] 
         print(f"Ongkir untuk wilayah {provinsi_pembeli} adalah {ongkir}!")
         return ongkir
-    else:
-        print(f"Provinsi {provinsi_pembeli} tidak ditemukan dalam daftar.")
-        return None
+    # else:
+    #     print(f"Provinsi {provinsi_pembeli} tidak ditemukan dalam daftar.")
+    #     input("klik enter untuk mengisi data kembali")
 
 def jenis_produk(username):
     os.system('cls')
     print(f"Selamat datang, silahkan pilih jenis produk : ")
+    print("+-----+--------------------------------------+")
+    print("| No  | Nama Produk                          |")
+    print("+-----+--------------------------------------+")
     for i in list_jenisproduk:
-        print(i,".",list_jenisproduk[i])
-    jenis = input("Pilihlah jenis produk (1/2/3/4/5/6): ")
+        print(f"| {i:<3} | {list_jenisproduk[i]:<36} |")
+    print("+-----+--------------------------------------+")
+    print(" ")
+
+    jenis = input("Pilihlah jenis produk (1/2/3/4/5/6/7): ")
+
     if not jenis:
         print("Masukkan pilihan!")
-        input("tekan enter untuk kembali")
+        input("Tekan enter untuk kembali")
         jenis_produk(username)
+
     elif jenis == '1':
         os.system('cls')
-        print(''' 
-        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
-        $$$$$$$$$^^^^^  Alat Persiapan Lahan  ^^^^^$$$$$$$$ 
-        __________________ SELAMAT BERBELANJA ___________________ 
-        ''')
-        for i in list_jenisproduk1:
-            nama_produk, harga_produk, stok_produk = list_jenisproduk1[i]
-            print(f"{i}. {nama_produk} - Rp{harga_produk} - Stok: {stok_produk}")
-        
-        pilih_produk1 = input("Pilih produk (1-5): ").strip()
-        produk = ""
-        if not pilih_produk1:
-            print("Masukkan pilihan!")
-            input("tekan enter untuk kembali")
+        file_path = "list_jenisproduk1.csv"
+        df = pd.read_csv(file_path)
+        print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+        print("|                 SELAMAT DATANG di TRIJAYA                 |")
+        print("|_______________________ Alat tanam ________________________|")
+        print("|___________________ dan Persiapan lahan ___________________|")
+        print("+-----+---------------------------+--------------+----------+")
+        print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+        print("+-----+---------------------------+--------------+----------+")
+        for index, row in df.iterrows():
+            id_produk = row["ID"]
+            nama_produk = row["Nama_Produk"]
+            harga_produk = row["Harga"]
+            stok_produk = row["Stok"]
+            print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+        print("+-----+---------------------------+--------------+----------+")
+
+        pilih_produk1 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+        if not pilih_produk1.isdigit() or int(pilih_produk1) not in df["ID"].values:
+            print("Pilihan tidak tersedia!")
+            input("Tekan Enter untuk kembali.")
             jenis_produk(username)
-        elif pilih_produk1 == "1":
-                produk = "Cangkul"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat tanam serbaguna dari baja yang tahan lama
-                Spesifikasi: Material -> Baja tahan karat,Pegangan -> Kayu ergonomis
-                Harga: Rp 50.000''')
-        elif pilih_produk1 == "2":
-                    produk = "Sekop"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi Produk: Alat berbahan ringan dengan pegangan ergonomis
-                    Spesifikasi: Material -> Baja ringan, Pegangan -> Plastik anti selip
-                    Harga: Rp 40.000''')
-        elif pilih_produk1 == "3":
-                    produk = "Garpu Tanah"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Alat tajam dan kuat untuk melonggarkan tanah
-                    Spesifikasi: Material -> Baja, Pegangan -> Kayu solid, Dimensi: 25 cm
-                    Harga: Rp 30.000''')
-        elif pilih_produk1 == "4":
-                    produk = "Penugal Tanam Manual"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Alat sederhana untuk membuat lubang tanam
-                    Spesifikasi: Material -> Logam tahan karat, Panjang -> 30 cm
-                    Harga: Rp 30.000''')
-        elif pilih_produk1 == "5":
-                    produk = "Ember Plastik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Ember ringan untuk mengangkut air atau material lainnya
-                    Spesifikasi: Material -> Plastik tebal, Kapasitas -> 10 liter
-                    Harga: Rp 15.000''')
-        if pilih_produk1 in list_jenisproduk1: 
-            produk, harga, stok = list_jenisproduk1[pilih_produk1]
-            print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
+            return
+
+        produk_row = df[df["ID"] == int(pilih_produk1)].iloc[0]
+        produk = produk_row["Nama_Produk"]
+        harga = produk_row["Harga"]
+        stok = produk_row["Stok"]
+        deskripsi = produk_row["Deskripsi"]
+        spek = produk_row["Spesifikasi"]
+        print(f"\nDetail Produk: {produk}")
+        print(f"{deskripsi} | {spek}")
+        print(f"Harga: Rp {harga:,}")
+        print(f"Stok: {stok}")
+        print('''
+        A. Masukkan keranjang
+        B. Beli dan bayar
+        ''')
+        keranjang_beli = input("Pilih menu: ").strip().upper()
+        if keranjang_beli == "A":
+            keranjang(username, produk, harga, stok)
+        elif keranjang_beli == "B":
+            keranjang(username, produk, harga, stok)
+            input("lanjut pembayaran...")
+            pembayaran(username)
+        else:
+            print("Pilihan tidak tersedia. Kembali ke menu.")
+            jenis_produk(username)
+
+    elif jenis == '2':
+        os.system('cls')
+        file_path = "list_jenisproduk2.csv"  
+        df = pd.read_csv(file_path)
+        print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+        print("|                 SELAMAT DATANG di TRIJAYA                 |")
+        print("|________________ Alat Pemeliharaan Tanaman ________________|")
+        print("+-----+---------------------------+--------------+----------+")
+        print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+        print("+-----+---------------------------+--------------+----------+")
+        for index, row in df.iterrows():
+            id_produk = row["ID"]
+            nama_produk = row["Nama_Produk"]
+            harga_produk = row["Harga"]
+            stok_produk = row["Stok"]
+            print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+        print("+-----+---------------------------+--------------+----------+")
+
+        pilih_produk2 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+        if not pilih_produk2.isdigit() or int(pilih_produk2) not in df["ID"].values:
+            print("Pilihan tidak tersedia!")
+            input("Tekan Enter untuk kembali.")
+            jenis_produk(username)
+            return
+
+        produk_row = df[df["ID"] == int(pilih_produk2)].iloc[0]
+        produk = produk_row["Nama_Produk"]
+        harga = produk_row["Harga"]
+        stok = produk_row["Stok"]
+        deskripsi = produk_row["Deskripsi"]
+        spek = produk_row["Spesifikasi"]
+        print(f"\nDetail Produk: {produk}")
+        print(f"{deskripsi} | {spek}")
+        print(f"Harga: Rp {harga:,}")
+        print(f"Stok: {stok}")
+        print('''
+        A. Masukkan keranjang
+        B. Beli dan bayar
+        ''')
+        keranjang_beli = input("Pilih menu: ").strip().upper()
+        if keranjang_beli == "A":
+            keranjang(username, produk, harga, stok)
+        elif keranjang_beli == "B":
+            keranjang(username, produk, harga, stok)
+            pembayaran(username)
+        else:
+            print("Pilihan tidak tersedia. Kembali ke menu.")
+            jenis_produk(username)
+
+    elif jenis == '3':
+        os.system('cls')
+        file_path = "list_jenisproduk3.csv"  
+        df = pd.read_csv(file_path)
+        print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+        print("|                 SELAMAT DATANG di TRIJAYA                 |")
+        print("|________________ Alat Panen dan Pascapanen ________________|")
+        print("+-----+---------------------------+--------------+----------+")
+        print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+        print("+-----+---------------------------+--------------+----------+")
+        for index, row in df.iterrows():
+            id_produk = row["ID"]
+            nama_produk = row["Nama_Produk"]
+            harga_produk = row["Harga"]
+            stok_produk = row["Stok"]
+            print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+        print("+-----+---------------------------+--------------+----------+")
+
+        pilih_produk3 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+        if not pilih_produk3.isdigit() or int(pilih_produk3) not in df["ID"].values:
+            print("Pilihan tidak tersedia!")
+            input("Tekan Enter untuk kembali.")
+            jenis_produk(username)
+            return
+
+        produk_row = df[df["ID"] == int(pilih_produk3)].iloc[0]
+        produk = produk_row["Nama_Produk"]
+        harga = produk_row["Harga"]
+        stok = produk_row["Stok"]
+        deskripsi = produk_row["Deskripsi"]
+        spek = produk_row["Spesifikasi"]
+        print(f"\nDetail Produk: {produk}")
+        print(f"{deskripsi} | {spek}")
+        print(f"Harga: Rp {harga:,}")
+        print(f"Stok: {stok}")
+        print('''
+        A. Masukkan keranjang
+        B. Beli dan bayar
+        ''')
+        keranjang_beli = input("Pilih menu: ").strip().upper()
+        if keranjang_beli == "A":
+            keranjang(username, produk, harga, stok)
+        elif keranjang_beli == "B":
+            keranjang(username, produk, harga, stok)
+            pembayaran(username)
+        else:
+            print("Pilihan tidak tersedia. Kembali ke menu.")
+            jenis_produk(username)
+
+    elif jenis == '4':
+        os.system('cls')
+        file_path = "list_jenisproduk4.csv"  
+        df = pd.read_csv(file_path)
+        print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+        print("|                 SELAMAT DATANG di TRIJAYA                 |")
+        print("|_____________________ Pupuk Dan Benih _____________________|")
+        print("+-----+---------------------------+--------------+----------+")
+        print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+        print("+-----+---------------------------+--------------+----------+")
+        for index, row in df.iterrows():
+            id_produk = row["ID"]
+            nama_produk = row["Nama_Produk"]
+            harga_produk = row["Harga"]
+            stok_produk = row["Stok"]
+            print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+        print("+-----+---------------------------+--------------+----------+")
+
+        pilih_produk4 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+        if not pilih_produk4.isdigit() or int(pilih_produk4) not in df["ID"].values:
+            print("Pilihan tidak tersedia!")
+            input("Tekan Enter untuk kembali.")
+            jenis_produk(username)
+            return
+
+        produk_row = df[df["ID"] == int(pilih_produk4)].iloc[0]
+        produk = produk_row["Nama_Produk"]
+        harga = produk_row["Harga"]
+        stok = produk_row["Stok"]
+        deskripsi = produk_row["Deskripsi"]
+        spek = produk_row["Spesifikasi"]
+        print(f"\nDetail Produk: {produk}")
+        print(f"{deskripsi} | {spek}")
+        print(f"Harga: Rp {harga:,}")
+        print(f"Stok: {stok}")
+        print('''
+        A. Masukkan keranjang
+        B. Beli dan bayar
+        ''')
+        keranjang_beli = input("Pilih menu: ").strip().upper()
+        if keranjang_beli == "A":
+            keranjang(username, produk, harga, stok)
+        elif keranjang_beli == "B":
+            keranjang(username, produk, harga, stok)
+            pembayaran(username)
+        else:
+            print("Pilihan tidak tersedia. Kembali ke menu.")
+            jenis_produk(username)
+
+    elif jenis == '5':
+        os.system('cls')
+        file_path = "list_jenisproduk5.csv" 
+        df = pd.read_csv(file_path)
+        print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+        print("|                 SELAMAT DATANG di TRIJAYA                 |")
+        print("|________________ Obat dan Perawatan Tanaman _______________|")
+        print("+-----+---------------------------+--------------+----------+")
+        print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+        print("+-----+---------------------------+--------------+----------+")
+        for index, row in df.iterrows():
+            id_produk = row["ID"]
+            nama_produk = row["Nama_Produk"]
+            harga_produk = row["Harga"]
+            stok_produk = row["Stok"]
+            print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+        print("+-----+---------------------------+--------------+----------+")
+
+        pilih_produk5 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+        if not pilih_produk5.isdigit() or int(pilih_produk5) not in df["ID"].values:
+            print("Pilihan tidak tersedia!")
+            input("Tekan Enter untuk kembali.")
+            jenis_produk(username)
+            return
+
+        produk_row = df[df["ID"] == int(pilih_produk5)].iloc[0]
+        produk = produk_row["Nama_Produk"]
+        harga = produk_row["Harga"]
+        stok = produk_row["Stok"]
+        deskripsi = produk_row["Deskripsi"]
+        spek = produk_row["Spesifikasi"]
+        print(f"\nDetail Produk: {produk}")
+        print(f"{deskripsi} | {spek}")
+        print(f"Harga: Rp {harga:,}")
+        print(f"Stok: {stok}")
+        print('''
+        A. Masukkan keranjang
+        B. Beli dan bayar
+        ''')
+        keranjang_beli = input("Pilih menu: ").strip().upper()
+        if keranjang_beli == "A":
+            keranjang(username, produk, harga, stok)
+        elif keranjang_beli == "B":
+            keranjang(username, produk, harga, stok)
+            pembayaran(username)
+        else:
+            print("Pilihan tidak tersedia. Kembali ke menu.")
+            jenis_produk(username)
+
+    elif jenis == '6':
+        os.system('cls')
+
+        search = input(f"Silahkan ketik barang yang anda cari :")
+        os.system('cls')
+        file_path = "list_jenisproduk1.csv" 
+        df = pd.read_csv(file_path)
+        if search == "sekop" or search == "garpu tanah" or search == "cangkul" or search == "ember plastik" :
+    
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+            print("|                 SELAMAT DATANG di TRIJAYA                 |")
+            print("|_______________________ Alat tanam ________________________|")
+            print("|___________________ dan Persiapan lahan ___________________|")
+            print("+-----+---------------------------+--------------+----------+")
+            print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+            print("+-----+---------------------------+--------------+----------+")
+            for index, row in df.iterrows():
+                id_produk = row["ID"]
+                nama_produk = row["Nama_Produk"]
+                harga_produk = row["Harga"]
+                stok_produk = row["Stok"]
+                print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+            print("+-----+---------------------------+--------------+----------+")
+
+            pilih_produk1 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+            if not pilih_produk1.isdigit() or int(pilih_produk1) not in df["ID"].values:
+                print("Pilihan tidak tersedia!")
+                input("Tekan Enter untuk kembali.")
+                jenis_produk(username)
+                return
+
+            produk_row = df[df["ID"] == int(pilih_produk1)].iloc[0]
+            produk = produk_row["Nama_Produk"]
+            harga = produk_row["Harga"]
+            stok = produk_row["Stok"]
+            deskripsi = produk_row["Deskripsi"]
+            spek = produk_row["Spesifikasi"]
+            print(f"\nDetail Produk: {produk}")
+            print(f"{deskripsi} | {spek}")
+            print(f"Harga: Rp {harga:,}")
+            print(f"Stok: {stok}")
             print('''
             A. Masukkan keranjang
             B. Beli dan bayar
@@ -367,1357 +919,244 @@ def jenis_produk(username):
             else:
                 print("Pilihan tidak tersedia. Kembali ke menu.")
                 jenis_produk(username)
-        else:
-            print("Pilihan tidak tersedia!")
-            input("Tekan Enter untuk kembali.")
-            jenis_produk(username)
-    elif jenis == '2':
-            os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Pemeliharaan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-            for i in list_jenisproduk2:
-                nama_produk, harga_produk, stok_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-            
-            pilih_produk2 = input("Pilih produk (1-5): ").strip()
-            produk = ""
-            if not pilih_produk2:
-                print("Masukkan pilihan!")
-                input("tekan enter untuk kembali")
-                jenis_produk(username)
-            elif pilih_produk2 == "1":
-                produk = "Gembor"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Penyiram tanaman dengan desain tradisional
-                Spesifikasi: Material -> Plastik tahan UV, Kapasitas -> 5 liter
-                Harga: Rp 45.000''')
-            elif pilih_produk2 == "2":
-                produk = "Gunting Dahan"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Gunting kuat untuk memotong dahan dengan mudah
-                Spesifikasi: Material -> Baja karbon, Pegangan -> Anti slip
-                Harga: Rp 60.000''')
-            elif pilih_produk2 == "3":
-                produk = "Sprayer Manual"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat penyemprot untuk pestisida atau pupuk cair
-                Spesifikasi: Kapasitas -> 2 liter, Material -> Plastik tebal
-                Harga: Rp 70.000''')
-            elif pilih_produk2 == "4":
-                produk = "Pemangkas Tunas Kecil"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Pemotong presisi untuk merapikan tunas kecil
-                Spesifikasi: Material -> Baja stainless, Panjang -> 20 cm
-                Harga: Rp 40.000''')
-            elif pilih_produk2 == "5":
-                produk = "Alat Pencabut Rumput"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Memudahkan mencabut rumput tanpa merusak tanaman
-                Spesifikasi: Material -> Baja, Pegangan -> Kayu ergonomis
-                Harga: Rp 35.000''')
-            if pilih_produk2 in list_jenisproduk2:
-                produk, harga = list_jenisproduk2[pilih_produk2]
-                print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                print('''
-                A. Masukkan keranjang
-                B. Beli dan bayar
-                ''')
-                keranjang_beli = input("Pilih menu: ").strip().upper()
-                if keranjang_beli == "A":
-                    keranjang(username, produk, harga, stok)
-                elif keranjang_beli == "B":
-                    keranjang(username, produk, harga, stok)
-                    pembayaran(username)
-                else:
-                    print("Pilihan tidak tersedia. Kembali ke menu.")
-                    jenis_produk(username)
-            else:
-                print("Pilihan tidak tersedia!")
-                input("Tekan Enter untuk kembali.")
-                jenis_produk(username)
-    elif jenis == '3':
-            os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-            for i in list_jenisproduk3:
-                nama_produk, harga_produk, stok_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-            
-            pilih_produk3 = input("Pilih produk (1-5): ").strip()
-
-            produk = ""    
-            if not pilih_produk3:
-                print("Masukkan pilihan!")
-                input("tekan enter untuk kembali")
-                jenis_produk(username)
-            elif pilih_produk3 == "1":
-                produk = "Sabit"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat panen tradisional dengan bilah tajam
-                Spesifikasi: Material -> Baja karbon, Pegangan -> Kayu solid
-                Harga: Rp 50.000''')
-            elif pilih_produk3 == "2":
-                produk = "Pisau Panen"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Pisau kecil untuk memotong buah atau tanaman kecil
-                Spesifikasi: Material -> Baja, Pegangan -> Plastik ergonomis
-                Harga: Rp 25.000''')
-            elif pilih_produk3 == "3":
-                produk = "Keranjang Panen Plastik"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Keranjang ringan dan tahan lama untuk hasil panen
-                Spesifikasi: Material -> Plastik tebal, Kapasitas -> 20 liter
-                Harga: Rp 30.000''')
-            elif pilih_produk3 == "4":
-                produk = "Timbangan Digital"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Timbangan presisi tinggi untuk hasil panen
-                Spesifikasi: Kapasitas -> 30 kg, Layar -> Digital LED
-                Harga: Rp 150.000''')
-            elif pilih_produk3 == "5":
-                produk = "Kantong Plastik Panen"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Paket plastik untuk membungku hasil
-                Spesifikasi: Material -> plastik berkualitas, Layar -> Digital LED
-                Harga: Rp 30.000''')
-
-            if pilih_produk3 in list_jenisproduk3:
-                produk, harga = list_jenisproduk3[pilih_produk3]
-                print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                print('''
-                A. Masukkan keranjang
-                B. Beli dan bayar
-                ''')
-                keranjang_beli = input("Pilih menu: ").strip().upper()
-                if keranjang_beli == "A":
-                    keranjang(username, produk, harga, stok)
-                elif keranjang_beli == "B":
-                    keranjang(username, produk, harga, stok)
-                    pembayaran(username)
-                else:
-                    print("Pilihan tidak tersedia. Kembali ke menu.")
-                    jenis_produk(username)
-            else:
-                print("Pilihan tidak tersedia!")
-                input("Tekan Enter untuk kembali.")
-                jenis_produk(username)
-           
-    elif jenis == "6":
-         os.system('cls')
-         search = input(f"Silahkan ketik barang yang anda cari :")
-         if search == "cangkul" or search == "ember" :
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Persiapan Lahan  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-            for i in list_jenisproduk1:
-                nama_produk, harga_produk, stok_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-            pilih_produk1 = input("Pilih produk (1-5): ").strip()
-            produk = ""
-            if not pilih_produk1:
-                print("Masukkan pilihan!")
-                input("tekan enter untuk kembali")
-                jenis_produk(username)
-            elif pilih_produk1 == "1":
-                produk = "Cangkul"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat tanam serbaguna dari baja yang tahan lama
-                Spesifikasi: Material -> Baja tahan karat,Pegangan -> Kayu ergonomis
-                Harga: Rp 50.000''')
-            elif pilih_produk1 == "2":
-                produk = "Sekop"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat berbahan ringan dengan pegangan ergonomis
-                Spesifikasi: Material -> Baja ringan, Pegangan -> Plastik anti selip
-                Harga: Rp 40.000''')
-            elif pilih_produk1 == "3":
-                produk = "Garpu Tanah"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat tajam dan kuat untuk melonggarkan tanah
-                Spesifikasi: Material -> Baja, Pegangan -> Kayu solid, Dimensi: 25 cm
-                Harga: Rp 30.000''')
-            elif pilih_produk1 == "4":
-                produk = "Penugal Tanam Manual"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat sederhana untuk membuat lubang tanam
-                Spesifikasi: Material -> Logam tahan karat, Panjang -> 30 cm
-                Harga: Rp 30.000''')
-            elif pilih_produk1 == "5":
-                produk = "Ember Plastik"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Ember ringan untuk mengangkut air atau material lainnya
-                Spesifikasi: Material -> Plastik tebal, Kapasitas -> 10 liter
-                Harga: Rp 15.000''')
-            if pilih_produk1 in list_jenisproduk1:
-                produk, harga = list_jenisproduk1[pilih_produk1]
-                print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                print('''
-                A. Masukkan keranjang
-                B. Beli dan bayar
-                ''')
-                keranjang_beli = input("Pilih menu: ").strip().upper()
-                if keranjang_beli == "A":
-                    keranjang(username, produk, harga, stok)
-                elif keranjang_beli == "B":
-                    keranjang(username, produk, harga, stok)
-                    pembayaran(username)
-                else:
-                    print("Pilihan tidak tersedia. Kembali ke menu.")
-                    jenis_produk(username)
-            else:
-                print("Pilihan tidak tersedia!")
-                input("Tekan Enter untuk kembali.")
-                jenis_produk(username)
-         os.system('cls')
-         if search == "sekop" or search == "garpu tanah" :
-            print('''
-        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        $$$$$$$$$^^^^^  Alat Persiapan Lahan  ^^^^^$$$$$$$$
-        __________________ SELAMAT BERBELANJA ___________________
-        ''')
-            for i in list_jenisproduk1:
-                nama_produk, harga_produk, stok_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-            
-            pilih_produk1 = input("Pilih produk (1-5): ").strip()
-            produk = ""
-            if not pilih_produk1:
-                print("Masukkan pilihan!")
-                input("tekan enter untuk kembali")
-                jenis_produk(username)
-            elif pilih_produk1 == "1":
-                produk = "Cangkul"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat tanam serbaguna dari baja yang tahan lama
-                Spesifikasi: Material -> Baja tahan karat,Pegangan -> Kayu ergonomis
-                Harga: Rp 50.000''')
-            elif pilih_produk1 == "2":
-                produk = "Sekop"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat berbahan ringan dengan pegangan ergonomis
-                Spesifikasi: Material -> Baja ringan, Pegangan -> Plastik anti selip
-                Harga: Rp 40.000''')
-            elif pilih_produk1 == "3":
-                produk = "Garpu Tanah"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat tajam dan kuat untuk melonggarkan tanah
-                Spesifikasi: Material -> Baja, Pegangan -> Kayu solid, Dimensi: 25 cm
-                Harga: Rp 30.000''')
-            elif pilih_produk1 == "4":
-                produk = "Penugal Tanam Manual"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat sederhana untuk membuat lubang tanam
-                Spesifikasi: Material -> Logam tahan karat, Panjang -> 30 cm
-                Harga: Rp 30.000''')
-            elif pilih_produk1 == "5":
-                produk = "Ember Plastik"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Ember ringan untuk mengangkut air atau material lainnya
-                Spesifikasi: Material -> Plastik tebal, Kapasitas -> 10 liter
-                Harga: Rp 15.000''')
-            if pilih_produk1 in list_jenisproduk1:
-                produk, harga = list_jenisproduk1[pilih_produk1]
-                print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                print('''
-                A. Masukkan keranjang
-                B. Beli dan bayar
-                ''')
-                keranjang_beli = input("Pilih menu: ").strip().upper()
-                if keranjang_beli == "A":
-                    keranjang(username, produk, harga, stok)
-                elif keranjang_beli == "B":
-                    keranjang(username, produk, harga, stok)
-                    pembayaran(username)
-                else:
-                    print("Pilihan tidak tersedia. Kembali ke menu.")
-                    jenis_produk(username)
-            else:
-                print("Pilihan tidak tersedia!")
-                input("Tekan Enter untuk kembali.")
-                jenis_produk(username)
-                
-         os.system('cls')
-         if search == "ember" :
-            print('''
-        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        $$$$$$$$$^^^^^  Alat Persiapan Lahan  ^^^^^$$$$$$$$
-        __________________ SELAMAT BERBELANJA ___________________
-        ''')
-            for i in list_jenisproduk1:
-                nama_produk, harga_produk, stok_produk = list_jenisproduk1[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-            
-            pilih_produk1 = input("Pilih produk (1-5): ").strip()
-            produk = ""
-            if not pilih_produk1:
-                print("Masukkan pilihan!")
-                input("tekan enter untuk kembali")
-                jenis_produk(username)
-            elif pilih_produk1 == "1":
-                produk = "Cangkul"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat tanam serbaguna dari baja yang tahan lama
-                Spesifikasi: Material -> Baja tahan karat,Pegangan -> Kayu ergonomis
-                Harga: Rp 50.000''')
-            elif pilih_produk1 == "2":
-                produk = "Sekop"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi Produk: Alat berbahan ringan dengan pegangan ergonomis
-                Spesifikasi: Material -> Baja ringan, Pegangan -> Plastik anti selip
-                Harga: Rp 40.000''')
-            elif pilih_produk1 == "3":
-                produk = "Garpu Tanah"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat tajam dan kuat untuk melonggarkan tanah
-                Spesifikasi: Material -> Baja, Pegangan -> Kayu solid, Dimensi: 25 cm
-                Harga: Rp 30.000''')
-            elif pilih_produk1 == "4":
-                produk = "Penugal Tanam Manual"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Alat sederhana untuk membuat lubang tanam
-                Spesifikasi: Material -> Logam tahan karat, Panjang -> 30 cm
-                Harga: Rp 30.000''')
-            elif pilih_produk1 == "5":
-                produk = "Ember Plastik"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Ember ringan untuk mengangkut air atau material lainnya
-                Spesifikasi: Material -> Plastik tebal, Kapasitas -> 10 liter
-                Harga: Rp 15.000''')
-            if pilih_produk1 in list_jenisproduk1:
-                produk, harga = list_jenisproduk1[pilih_produk1]
-                print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                print('''
-                A. Masukkan keranjang
-                B. Beli dan bayar
-                ''')
-                keranjang_beli = input("Pilih menu: ").strip().upper()
-                if keranjang_beli == "A":
-                    keranjang(username, produk, harga, stok)
-                elif keranjang_beli == "B":
-                    keranjang(username, produk, harga, stok)
-                    pembayaran(username)
-                else:
-                    print("Pilihan tidak tersedia. Kembali ke menu.")
-                    jenis_produk(username)
-            else:
-                print("Pilihan tidak tersedia!")
-                input("Tekan Enter untuk kembali.")
-                jenis_produk(username)
         
-         elif search == "gembor" or search == "gunting" :
-
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Pemeliharaan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-                for i in list_jenisproduk2:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk2[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-                pilih_produk2 = input("Pilih produk (1-5): ").strip()
-                produk = ""
-                if not pilih_produk2:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-                elif pilih_produk2 == "1":
-                    produk = "Gembor"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi Produk: Penyiram tanaman dengan desain tradisional
-                    Spesifikasi: Material -> Plastik tahan UV, Kapasitas -> 5 liter
-                    Harga: Rp 45.000''')
-                elif pilih_produk2 == "2":
-                    produk = "Gunting Dahan"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi Produk: Gunting kuat untuk memotong dahan dengan mudah
-                    Spesifikasi: Material -> Baja karbon, Pegangan -> Anti slip
-                    Harga: Rp 60.000''')
-                elif pilih_produk2 == "3":
-                    produk = "Sprayer Manual"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Alat penyemprot untuk pestisida atau pupuk cair
-                    Spesifikasi: Kapasitas -> 2 liter, Material -> Plastik tebal
-                    Harga: Rp 70.000''')
-                elif pilih_produk2 == "4":
-                    produk = "Pemangkas Tunas Kecil"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pemotong presisi untuk merapikan tunas kecil
-                    Spesifikasi: Material -> Baja stainless, Panjang -> 20 cm
-                    Harga: Rp 40.000''')
-                elif pilih_produk2 == "5":
-                    produk = "Alat Pencabut Rumput"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Memudahkan mencabut rumput tanpa merusak tanaman
-                    Spesifikasi: Material -> Baja, Pegangan -> Kayu ergonomis
-                    Harga: Rp 35.000''')
-                if pilih_produk2 in list_jenisproduk2:
-                    produk, harga = list_jenisproduk2[pilih_produk2]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-         elif search == "sprayer" or search == "pemangkas" :
-                os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Alat Pemeliharaan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-                for i in list_jenisproduk2:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk2[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-                pilih_produk2 = input("Pilih produk (1-5): ").strip()
-                produk = ""
-                if not pilih_produk2:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-                elif pilih_produk2 == "1":
-                    produk = "Gembor"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi Produk: Penyiram tanaman dengan desain tradisional
-                    Spesifikasi: Material -> Plastik tahan UV, Kapasitas -> 5 liter
-                    Harga: Rp 45.000''')
-                elif pilih_produk2 == "2":
-                    produk = "Gunting Dahan"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi Produk: Gunting kuat untuk memotong dahan dengan mudah
-                    Spesifikasi: Material -> Baja karbon, Pegangan -> Anti slip
-                    Harga: Rp 60.000''')
-                elif pilih_produk2 == "3":
-                    produk = "Sprayer Manual"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Alat penyemprot untuk pestisida atau pupuk cair
-                    Spesifikasi: Kapasitas -> 2 liter, Material -> Plastik tebal
-                    Harga: Rp 70.000''')
-                elif pilih_produk2 == "4":
-                    produk = "Pemangkas Tunas Kecil"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pemotong presisi untuk merapikan tunas kecil
-                    Spesifikasi: Material -> Baja stainless, Panjang -> 20 cm
-                    Harga: Rp 40.000''')
-                elif pilih_produk2 == "5":
-                    produk = "Alat Pencabut Rumput"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Memudahkan mencabut rumput tanpa merusak tanaman
-                    Spesifikasi: Material -> Baja, Pegangan -> Kayu ergonomis
-                    Harga: Rp 35.000''')
-                if pilih_produk2 in list_jenisproduk2:
-                    produk, harga = list_jenisproduk2[pilih_produk2]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-         elif search == "pencabut" :
-                os.system('cls')
-                print('''
-                =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                $$$$$$$$$^^^^^  Alat Pemeliharaan Tanaman  ^^^^^$$$$$$$$
-                __________________ SELAMAT BERBELANJA ___________________
-                ''')
-                for i in list_jenisproduk2:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk2[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-                pilih_produk2 = input("Pilih produk (1-5): ").strip()
-                produk = ""
-                if not pilih_produk2:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-                elif pilih_produk2 == "1":
-                    produk = "Gembor"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi Produk: Penyiram tanaman dengan desain tradisional
-                    Spesifikasi: Material -> Plastik tahan UV, Kapasitas -> 5 liter
-                    Harga: Rp 45.000''')
-                elif pilih_produk2 == "2":
-                    produk = "Gunting Dahan"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi Produk: Gunting kuat untuk memotong dahan dengan mudah
-                    Spesifikasi: Material -> Baja karbon, Pegangan -> Anti slip
-                    Harga: Rp 60.000''')
-                elif pilih_produk2 == "3":
-                    produk = "Sprayer Manual"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Alat penyemprot untuk pestisida atau pupuk cair
-                    Spesifikasi: Kapasitas -> 2 liter, Material -> Plastik tebal
-                    Harga: Rp 70.000''')
-                elif pilih_produk2 == "4":
-                    produk = "Pemangkas Tunas Kecil"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pemotong presisi untuk merapikan tunas kecil
-                    Spesifikasi: Material -> Baja stainless, Panjang -> 20 cm
-                    Harga: Rp 40.000''')
-                elif pilih_produk2 == "5":
-                    produk = "Alat Pencabut Rumput"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Memudahkan mencabut rumput tanpa merusak tanaman
-                    Spesifikasi: Material -> Baja, Pegangan -> Kayu ergonomis
-                    Harga: Rp 35.000''')
-                if pilih_produk2 in list_jenisproduk2:
-                    produk, harga = list_jenisproduk2[pilih_produk2]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-         elif search == "sabit" or search == "pisau" :
-                os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-                for i in list_jenisproduk3:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk3[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-                pilih_produk3 = input("Pilih produk (1-5): ").strip()
-                
-                produk = ""
-                if not pilih_produk3:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-            
-                elif pilih_produk3 == "1":
-                    produk = "Sabit"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Alat panen tradisional dengan bilah tajam
-                    Spesifikasi: Material -> Baja karbon, Pegangan -> Kayu solid
-                    Harga: Rp 50.000''')
-                elif pilih_produk3 == "2":
-                    produk = "Pisau Panen"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pisau kecil untuk memotong buah atau tanaman kecil
-                    Spesifikasi: Material -> Baja, Pegangan -> Plastik ergonomis
-                    Harga: Rp 25.000''')
-                elif pilih_produk3 == "3":
-                    produk = "Keranjang Panen Plastik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Keranjang ringan dan tahan lama untuk hasil panen
-                    Spesifikasi: Material -> Plastik tebal, Kapasitas -> 20 liter
-                    Harga: Rp 30.000''')
-                elif pilih_produk3 == "4":
-                    produk = "Timbangan Digital"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Timbangan presisi tinggi untuk hasil panen
-                    Spesifikasi: Kapasitas -> 30 kg, Layar -> Digital LED
-                    Harga: Rp 150.000''')
-                elif pilih_produk3 == "5":
-                    produk = "Kantong Plastik Panen"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Paket plastik untuk membungku hasil
-                    Spesifikasi: Material -> plastik berkualitas, Layar -> Digital LED
-                    Harga: Rp 30.000''')
-
-                if pilih_produk3 in list_jenisproduk3:
-                    produk, harga = list_jenisproduk3[pilih_produk3]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-           
-         elif search == "keranjang" or search == "timbangan" :
-                os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-                for i in list_jenisproduk3:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk3[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                    
-                pilih_produk3 = input("Pilih produk (1-5): ").strip()
-                
-                produk = ""
-                if not pilih_produk3:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-
-            
-                if pilih_produk3 == "1":
-                    produk = "Sabit"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Alat panen tradisional dengan bilah tajam
-                    Spesifikasi: Material -> Baja karbon, Pegangan -> Kayu solid
-                    Harga: Rp 50.000''')
-                elif pilih_produk3 == "2":
-                    produk = "Pisau Panen"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pisau kecil untuk memotong buah atau tanaman kecil
-                    Spesifikasi: Material -> Baja, Pegangan -> Plastik ergonomis
-                    Harga: Rp 25.000''')
-                elif pilih_produk3 == "3":
-                    produk = "Keranjang Panen Plastik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Keranjang ringan dan tahan lama untuk hasil panen
-                    Spesifikasi: Material -> Plastik tebal, Kapasitas -> 20 liter
-                    Harga: Rp 30.000''')
-                elif pilih_produk3 == "4":
-                    produk = "Timbangan Digital"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Timbangan presisi tinggi untuk hasil panen
-                    Spesifikasi: Kapasitas -> 30 kg, Layar -> Digital LED
-                    Harga: Rp 150.000''')
-                elif pilih_produk3 == "5":
-                    produk = "Kantong Plastik Panen"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Paket plastik untuk membungku hasil
-                    Spesifikasi: Material -> plastik berkualitas, Layar -> Digital LED
-                    Harga: Rp 30.000''')
-
-                if pilih_produk3 in list_jenisproduk3:
-                    produk, harga = list_jenisproduk3[pilih_produk3]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-         elif search == "plastik" :
-                os.system('cls')
-                print('''
-                =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                $$$$$$$$$^^^^^  Alat Panen dan Pascapanen    ^^^^^$$$$$$$$
-                __________________ SELAMAT BERBELANJA ___________________
-                ''')
-                for i in list_jenisproduk3:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk3[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-                pilih_produk3 = input("Pilih produk (1-5): ").strip()
-
-                produk = ""
-                if not pilih_produk3:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-            
-                elif pilih_produk3 == "1":
-                    produk = "Sabit"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Alat panen tradisional dengan bilah tajam
-                    Spesifikasi: Material -> Baja karbon, Pegangan -> Kayu solid
-                    Harga: Rp 50.000''')
-                elif pilih_produk3 == "2":
-                    produk = "Pisau Panen"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pisau kecil untuk memotong buah atau tanaman kecil
-                    Spesifikasi: Material -> Baja, Pegangan -> Plastik ergonomis
-                    Harga: Rp 25.000''')
-                elif pilih_produk3 == "3":
-                    produk = "Keranjang Panen Plastik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Keranjang ringan dan tahan lama untuk hasil panen
-                    Spesifikasi: Material -> Plastik tebal, Kapasitas -> 20 liter
-                    Harga: Rp 30.000''')
-                elif pilih_produk3 == "4":
-                    produk = "Timbangan Digital"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Timbangan presisi tinggi untuk hasil panen
-                    Spesifikasi: Kapasitas -> 30 kg, Layar -> Digital LED
-                    Harga: Rp 150.000''')
-                elif pilih_produk3 == "5":
-                    produk = "Kantong Plastik Panen"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Paket plastik untuk membungku hasil
-                    Spesifikasi: Material -> plastik berkualitas, Layar -> Digital LED
-                    Harga: Rp 30.000''')
-                if pilih_produk3 in list_jenisproduk3:
-                    produk, harga = list_jenisproduk3[pilih_produk3]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-         elif search == "pupuk" or search == "benih" :
-                os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-                for i in list_jenisproduk4:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk4[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-                pilih_produk4 = input("Pilih produk (1-5): ").strip()
-
-                produk = ""
-                if not pilih_produk4:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-            
-                elif pilih_produk4 == "1":
-                    produk = "Pupuk Organik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pupuk alami untuk meningkatkan kesuburan tanah
-                    Spesifikasi: Berat: 1 kg, Bahan: Kompos organik
-                    Harga: Rp 35.000''')
-                elif pilih_produk4 == "2":
-                    produk = "Pupuk Urea"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pupuk kimia untuk mempercepat pertumbuhan tanaman
-                    Spesifikasi: Berat: 2 kg, Kandungan: Nitrogen tinggi
-                    Harga: Rp 100.000''')
-                elif pilih_produk4 == "3":
-                    produk = "Benih Sayuran (1 paket)"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Paket benih berkualitas untuk berbagai sayuran
-                    Spesifikasi: Isi: 50 gram, Jenis: Aneka sayuran
-                    Harga: Rp 20.000''')
-                elif pilih_produk4 == "4":
-                    produk = "Cocopeat"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Media tanam serbaguna dari serbuk kelapa
-                    Spesifikasi: Berat: 1 kg, Material: Serbuk kelapa
-                    Harga: Rp 25.000''')
-                elif pilih_produk4 == "5":
-                    produk = "Kapur Dolomit"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Bahan alami untuk menetralkan pH tanah
-                    Spesifikasi: Berat: 1 kg, Material: Kapur murni
-                    Harga: Rp 20.000''')
-
-                if pilih_produk4 in list_jenisproduk4:
-                    produk, harga = list_jenisproduk4[pilih_produk4]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-         elif search == "cocopeat" or search == "kapur" :
-                os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-                for i in list_jenisproduk4:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk4[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                    
-                pilih_produk4 = input("Pilih produk (1-5): ").strip()
-                
-                produk = ""
-                if not pilih_produk4:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-            
-                elif pilih_produk4 == "1":
-                    produk = "Pupuk Organik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pupuk alami untuk meningkatkan kesuburan tanah
-                    Spesifikasi: Berat: 1 kg, Bahan: Kompos organik
-                    Harga: Rp 35.000''')
-                elif pilih_produk4 == "2":
-                    produk = "Pupuk Urea"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pupuk kimia untuk mempercepat pertumbuhan tanaman
-                    Spesifikasi: Berat: 2 kg, Kandungan: Nitrogen tinggi
-                    Harga: Rp 100.000''')
-                elif pilih_produk4 == "3":
-                    produk = "Benih Sayuran (1 paket)"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Paket benih berkualitas untuk berbagai sayuran
-                    Spesifikasi: Isi: 50 gram, Jenis: Aneka sayuran
-                    Harga: Rp 20.000''')
-                elif pilih_produk4 == "4":
-                    produk = "Cocopeat"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Media tanam serbaguna dari serbuk kelapa
-                    Spesifikasi: Berat: 1 kg, Material: Serbuk kelapa
-                    Harga: Rp 25.000''')
-                elif pilih_produk4 == "5":
-                    produk = "Kapur Dolomit"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Bahan alami untuk menetralkan pH tanah
-                    Spesifikasi: Berat: 1 kg, Material: Kapur murni
-                    Harga: Rp 20.000''')
-
-                if pilih_produk4 in list_jenisproduk4:
-                    produk, harga = list_jenisproduk4[pilih_produk4]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-            
-         elif search == "pestisida" or search == "fungisida" :
-                os.system('cls')
-                print('''
-        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-        __________________ SELAMAT BERBELANJA ___________________
-        ''')
-                for i in list_jenisproduk5:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk5[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-                pilih_produk5 = input("Pilih produk (1-5): ").strip()
-                
-                produk = ""
-                if not pilih_produk5:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-            
-                elif pilih_produk5 == "1":
-                    produk = "Pestisida Organik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pestisida alami untuk mengendalikan hama pada tanaman
-                    Spesifikasi: Kandungan: Ekstrak tumbuhan, Volume: 500 ml
-                    Harga: Rp 60.000''')
-                elif pilih_produk5 == "2":
-                    produk = "Fungisida Cair"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Obat cair efektif untuk mencegah jamur pada tanaman
-                    Spesifikasi: Volume: 500 ml, Kandungan: Fungisida alami
-                    Harga: Rp 40.000''')
-                elif pilih_produk5 == "3":
-                    produk = "Insektisida"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Produk kimia untuk mengatasi serangga pengganggu
-                    Spesifikasi: Kandungan: Insektisida sintetik, Volume: 250 ml
-                    Harga: Rp 50.000''')
-                elif pilih_produk5 == "4":
-                    produk = "Herbisida"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pengendali gulma yang efektif untuk melindungi tanaman
-                    Spesifikasi: Volume: 500 ml, Kandungan: Herbisida sistemik
-                    Harga: Rp 45.000''')
-                elif pilih_produk5 == "5":
-                    produk = "ZPT (Zat Pengatur Tumbuh)"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Larutan untuk merangsang pertumbuhan tanaman
-                    Spesifikasi: Volume: 100 ml, Kandungan: ZPT alami
-                    Harga: Rp 35.000''')
-
-                if pilih_produk5 in list_jenisproduk5:
-                    produk, harga = list_jenisproduk5[pilih_produk5]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-         elif search == "insektisida" or search == "herbisida" :
-                os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-                for i in list_jenisproduk5:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk5[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                
-                pilih_produk5 = input("Pilih produk (1-5): ").strip()
-                
-                produk = ""
-                if not pilih_produk5:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-            
-                elif pilih_produk5 == "1":
-                    produk = "Pestisida Organik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pestisida alami untuk mengendalikan hama pada tanaman
-                    Spesifikasi: Kandungan: Ekstrak tumbuhan, Volume: 500 ml
-                    Harga: Rp 60.000''')
-                elif pilih_produk5 == "2":
-                    produk = "Fungisida Cair"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Obat cair efektif untuk mencegah jamur pada tanaman
-                    Spesifikasi: Volume: 500 ml, Kandungan: Fungisida alami
-                    Harga: Rp 40.000''')
-                elif pilih_produk5 == "3":
-                    produk = "Insektisida"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Produk kimia untuk mengatasi serangga pengganggu
-                    Spesifikasi: Kandungan: Insektisida sintetik, Volume: 250 ml
-                    Harga: Rp 50.000''')
-                elif pilih_produk5 == "4":
-                    produk = "Herbisida"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pengendali gulma yang efektif untuk melindungi tanaman
-                    Spesifikasi: Volume: 500 ml, Kandungan: Herbisida sistemik
-                    Harga: Rp 45.000''')
-                elif pilih_produk5 == "5":
-                    produk = "ZPT (Zat Pengatur Tumbuh)"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Larutan untuk merangsang pertumbuhan tanaman
-                    Spesifikasi: Volume: 100 ml, Kandungan: ZPT alami
-                    Harga: Rp 35.000''')
-
-                if pilih_produk5 in list_jenisproduk5:
-                    produk, harga = list_jenisproduk5[pilih_produk5]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-         elif search == "zpt":
-                os.system('cls')
-                print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-                for i in list_jenisproduk5:
-                    nama_produk, harga_produk, stok_produk = list_jenisproduk5[i]
-                    print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-                    
-                pilih_produk5 = input("Pilih produk (1-5): ").strip()
-                
-                produk = ""
-                if not pilih_produk5:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-            
-                elif pilih_produk5 == "1":
-                    produk = "Pestisida Organik"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pestisida alami untuk mengendalikan hama pada tanaman
-                    Spesifikasi: Kandungan: Ekstrak tumbuhan, Volume: 500 ml
-                    Harga: Rp 60.000''')
-                elif pilih_produk5 == "2":
-                    produk = "Fungisida Cair"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Obat cair efektif untuk mencegah jamur pada tanaman
-                    Spesifikasi: Volume: 500 ml, Kandungan: Fungisida alami
-                    Harga: Rp 40.000''')
-                elif pilih_produk5 == "3":
-                    produk = "Insektisida"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Produk kimia untuk mengatasi serangga pengganggu
-                    Spesifikasi: Kandungan: Insektisida sintetik, Volume: 250 ml
-                    Harga: Rp 50.000''')
-                elif pilih_produk5 == "4":
-                    produk = "Herbisida"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Pengendali gulma yang efektif untuk melindungi tanaman
-                    Spesifikasi: Volume: 500 ml, Kandungan: Herbisida sistemik
-                    Harga: Rp 45.000''')
-                elif pilih_produk5 == "5":
-                    produk = "ZPT (Zat Pengatur Tumbuh)"
-                    print("\nDetail Produk: ")
-                    print('''
-                    Deskripsi: Larutan untuk merangsang pertumbuhan tanaman
-                    Spesifikasi: Volume: 100 ml, Kandungan: ZPT alami
-                    Harga: Rp 35.000''')
-
-                if pilih_produk5 in list_jenisproduk5:
-                    produk, harga = list_jenisproduk5[pilih_produk5]
-                    print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                    print('''
-                    A. Masukkan keranjang
-                    B. Beli dan bayar
-                    ''')
-                    keranjang_beli = input("Pilih menu: ").strip().upper()
-                    if keranjang_beli == "A":
-                        keranjang(username, produk, harga, stok)
-                    elif keranjang_beli == "B":
-                        keranjang(username, produk, harga, stok)
-                        pembayaran(username)
-                    else:
-                        print("Pilihan tidak tersedia. Kembali ke menu.")
-                        jenis_produk(username)
-                else:
-                    print("Pilihan tidak tersedia!")
-                    input("Tekan Enter untuk kembali.")
-                    jenis_produk(username)
-            
-    elif jenis == '4':
+        elif search == "gembor" or search == "gunting" or search == "sprayer" or search == "pemangkas" or search == "pencabut" :
             os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-            for i in list_jenisproduk4:
-                nama_produk, harga_produk, stok_produk = list_jenisproduk4[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-            
-            pilih_produk4 = input("Pilih produk (1-5): ").strip()
-            
-            produk = ""
-            if not pilih_produk4:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-        
-            elif pilih_produk4 == "1":
-                produk = "Pupuk Organik"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Pupuk alami untuk meningkatkan kesuburan tanah
-                Spesifikasi: Berat: 1 kg, Bahan: Kompos organik
-                Harga: Rp 35.000''')
-            elif pilih_produk4 == "2":
-                produk = "Pupuk Urea"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Pupuk kimia untuk mempercepat pertumbuhan tanaman
-                Spesifikasi: Berat: 2 kg, Kandungan: Nitrogen tinggi
-                Harga: Rp 100.000''')
-            elif pilih_produk4 == "3":
-                produk = "Benih Sayuran (1 paket)"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Paket benih berkualitas untuk berbagai sayuran
-                Spesifikasi: Isi: 50 gram, Jenis: Aneka sayuran
-                Harga: Rp 20.000''')
-            elif pilih_produk4 == "4":
-                produk = "Cocopeat"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Media tanam serbaguna dari serbuk kelapa
-                Spesifikasi: Berat: 1 kg, Material: Serbuk kelapa
-                Harga: Rp 25.000''')
-            elif pilih_produk4 == "5":
-                produk = "Kapur Dolomit"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Bahan alami untuk menetralkan pH tanah
-                Spesifikasi: Berat: 1 kg, Material: Kapur murni
-                Harga: Rp 20.000''')
+            file_path = "list_jenisproduk2.csv"  
+            df = pd.read_csv(file_path)
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+            print("|                 SELAMAT DATANG di TRIJAYA                 |")
+            print("|________________ Alat Pemeliharaan Tanaman ________________|")
+            print("+-----+---------------------------+--------------+----------+")
+            print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+            print("+-----+---------------------------+--------------+----------+")
+            for index, row in df.iterrows():
+                id_produk = row["ID"]
+                nama_produk = row["Nama_Produk"]
+                harga_produk = row["Harga"]
+                stok_produk = row["Stok"]
+                print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+            print("+-----+---------------------------+--------------+----------+")
 
-            if pilih_produk4 in list_jenisproduk4:
-                produk, harga = list_jenisproduk4[pilih_produk4]
-                print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                print('''
-                A. Masukkan keranjang
-                B. Beli dan bayar
-                ''')
-                keranjang_beli = input("Pilih menu: ").strip().upper()
-                if keranjang_beli == "A":
-                    keranjang(username, produk, harga, stok)
-                elif keranjang_beli == "B":
-                    keranjang(username, produk, harga, stok)
-                    pembayaran(username)
-                else:
-                    print("Pilihan tidak tersedia. Kembali ke menu.")
-                    jenis_produk(username)
-            else:
+            pilih_produk2 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+            if not pilih_produk2.isdigit() or int(pilih_produk2) not in df["ID"].values:
                 print("Pilihan tidak tersedia!")
                 input("Tekan Enter untuk kembali.")
                 jenis_produk(username)
-           
-    elif jenis == "5":   
-            os.system('cls')
-            print('''
-            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            $$$$$$$$$^^^^^  Obat dan Perawatan Tanaman  ^^^^^$$$$$$$$
-            __________________ SELAMAT BERBELANJA ___________________
-            ''')
-            for i in list_jenisproduk5:
-                nama_produk, harga_produk, stok_produk = list_jenisproduk5[i]
-                print(f"{i}. {nama_produk} - Rp{harga_produk} - {stok_produk}")
-            
-            pilih_produk5 = input("Pilih produk (1-5): ").strip()
-            
-            produk = ""
-            if not pilih_produk5:
-                    print("Masukkan pilihan!")
-                    input("tekan enter untuk kembali")
-                    jenis_produk(username)
-        
-            elif pilih_produk5 == "1":
-                produk = "Pestisida Organik"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Pestisida alami untuk mengendalikan hama pada tanaman
-                Spesifikasi: Kandungan: Ekstrak tumbuhan, Volume: 500 ml
-                Harga: Rp 60.000''')
-            elif pilih_produk5 == "2":
-                produk = "Fungisida Cair"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Obat cair efektif untuk mencegah jamur pada tanaman
-                Spesifikasi: Volume: 500 ml, Kandungan: Fungisida alami
-                Harga: Rp 40.000''')
-            elif pilih_produk5 == "3":
-                produk = "Insektisida"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Produk kimia untuk mengatasi serangga pengganggu
-                Spesifikasi: Kandungan: Insektisida sintetik, Volume: 250 ml
-                Harga: Rp 50.000''')
-            elif pilih_produk5 == "4":
-                produk = "Herbisida"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Pengendali gulma yang efektif untuk melindungi tanaman
-                Spesifikasi: Volume: 500 ml, Kandungan: Herbisida sistemik
-                Harga: Rp 45.000''')
-            elif pilih_produk5 == "5":
-                produk = "ZPT (Zat Pengatur Tumbuh)"
-                print("\nDetail Produk: ")
-                print('''
-                Deskripsi: Larutan untuk merangsang pertumbuhan tanaman
-                Spesifikasi: Volume: 100 ml, Kandungan: ZPT alami
-                Harga: Rp 35.000''')
+                return
 
-            if pilih_produk5 in list_jenisproduk5:
-                produk, harga = list_jenisproduk5[pilih_produk5]
-                print(f"\n{produk} stok:{stok} dengan harga Rp{harga} adalah produk yang dipilih oleh {username}")
-                print('''
-                A. Masukkan keranjang
-                B. Beli dan bayar
-                ''')
-                keranjang_beli = input("Pilih menu: ").strip().upper()
-                if keranjang_beli == "A":
-                    keranjang(username, produk, harga, stok)
-                elif keranjang_beli == "B":
-                    keranjang(username, produk, harga, stok)
-                    pembayaran(username)
-                else:
-                    print("Pilihan tidak tersedia. Kembali ke menu.")
-                    jenis_produk(username)
+            produk_row = df[df["ID"] == int(pilih_produk2)].iloc[0]
+            produk = produk_row["Nama_Produk"]
+            harga = produk_row["Harga"]
+            stok = produk_row["Stok"]
+            deskripsi = produk_row["Deskripsi"]
+            spek = produk_row["Spesifikasi"]
+            print(f"\nDetail Produk: {produk}")
+            print(f"{deskripsi} | {spek}")
+            print(f"Harga: Rp {harga:,}")
+            print(f"Stok: {stok}")
+            print('''
+            A. Masukkan keranjang
+            B. Beli dan bayar
+            ''')
+            keranjang_beli = input("Pilih menu: ").strip().upper()
+            if keranjang_beli == "A":
+                keranjang(username, produk, harga, stok)
+            elif keranjang_beli == "B":
+                keranjang(username, produk, harga, stok)
+                pembayaran(username)
             else:
+                print("Pilihan tidak tersedia. Kembali ke menu.")
+                jenis_produk(username)
+
+        elif search == "sabit" or search == "pisau" or search == "keranjang" or search == "plastik" or search == "timbangan" :
+            os.system('cls')
+            file_path = "list_jenisproduk3.csv"
+            df = pd.read_csv(file_path)
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+            print("|                 SELAMAT DATANG di TRIJAYA                 |")
+            print("|________________ Alat Panen dan Pascapanen ________________|")
+            print("+-----+---------------------------+--------------+----------+")
+            print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+            print("+-----+---------------------------+--------------+----------+")
+            for index, row in df.iterrows():
+                id_produk = row["ID"]
+                nama_produk = row["Nama_Produk"]
+                harga_produk = row["Harga"]
+                stok_produk = row["Stok"]
+                print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+            print("+-----+---------------------------+--------------+----------+")
+
+            pilih_produk3 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+            if not pilih_produk3.isdigit() or int(pilih_produk3) not in df["ID"].values:
                 print("Pilihan tidak tersedia!")
                 input("Tekan Enter untuk kembali.")
                 jenis_produk(username)
-    elif jenis == '7':
-        home()
-           
+                return
+
+            produk_row = df[df["ID"] == int(pilih_produk3)].iloc[0]
+            produk = produk_row["Nama_Produk"]
+            harga = produk_row["Harga"]
+            stok = produk_row["Stok"]
+            deskripsi = produk_row["Deskripsi"]
+            spek = produk_row["Spesifikasi"]
+            print(f"\nDetail Produk: {produk}")
+            print(f"{deskripsi} | {spek}")
+            print(f"Harga: Rp {harga:,}")
+            print(f"Stok: {stok}")
+            print('''
+            A. Masukkan keranjang
+            B. Beli dan bayar
+            ''')
+            keranjang_beli = input("Pilih menu: ").strip().upper()
+            if keranjang_beli == "A":
+                keranjang(username, produk, harga, stok)
+            elif keranjang_beli == "B":
+                keranjang(username, produk, harga, stok)
+                pembayaran(username)
+            else:
+                print("Pilihan tidak tersedia. Kembali ke menu.")
+                jenis_produk(username)
+
+        elif search == "pupuk" or search == "benih" or search == "cocopeat" or search == "kapur" :
+            os.system('cls')
+            file_path = "list_jenisproduk4.csv"  
+            df = pd.read_csv(file_path)
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+            print("|                 SELAMAT DATANG di TRIJAYA                 |")
+            print("|_____________________ Pupuk Dan Benih _____________________|")
+            print("+-----+---------------------------+--------------+----------+")
+            print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+            print("+-----+---------------------------+--------------+----------+")
+            for index, row in df.iterrows():
+                id_produk = row["ID"]
+                nama_produk = row["Nama_Produk"]
+                harga_produk = row["Harga"]
+                stok_produk = row["Stok"]
+                print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |") 
+            print("+-----+---------------------------+--------------+----------+")
+
+            pilih_produk4 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+            if not pilih_produk4.isdigit() or int(pilih_produk4) not in df["ID"].values:
+                print("Pilihan tidak tersedia!")
+                input("Tekan Enter untuk kembali.")
+                jenis_produk(username)
+                return
+
+            produk_row = df[df["ID"] == int(pilih_produk4)].iloc[0]
+            produk = produk_row["Nama_Produk"]
+            harga = produk_row["Harga"]
+            stok = produk_row["Stok"]
+            deskripsi = produk_row["Deskripsi"]
+            spek = produk_row["Spesifikasi"]
+            print(f"\nDetail Produk: {produk}")
+            print(f"{deskripsi} | {spek}")
+            print(f"Harga: Rp {harga:,}")
+            print(f"Stok: {stok}")
+            print('''
+            A. Masukkan keranjang
+            B. Beli dan bayar
+            ''')
+            keranjang_beli = input("Pilih menu: ").strip().upper()
+            if keranjang_beli == "A":
+                keranjang(username, produk, harga, stok)
+            elif keranjang_beli == "B":
+                keranjang(username, produk, harga, stok)
+                pembayaran(username)
+            else:
+                print("Pilihan tidak tersedia. Kembali ke menu.")
+                jenis_produk(username)
+
+        elif search == "pestisida" or search == "fungisida" or search == "insektisida" or search == "herbisida" or search == "zpt" :
+            os.system('cls')
+            file_path = "list_jenisproduk5.csv" 
+            df = pd.read_csv(file_path)
+            print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
+            print("|                 SELAMAT DATANG di TRIJAYA                 |")
+            print("|________________ Obat dan Perawatan Tanaman _______________|")
+            print("+-----+---------------------------+--------------+----------+")
+            print("| No  | Nama Produk               | Harga (Rp)   | Stok     |")
+            print("+-----+---------------------------+--------------+----------+")
+            for index, row in df.iterrows():
+                id_produk = row["ID"]
+                nama_produk = row["Nama_Produk"]
+                harga_produk = row["Harga"]
+                stok_produk = row["Stok"]
+                print(f"| {id_produk:<3} | {nama_produk:<25} | Rp{harga_produk:>10,} | {stok_produk:>8} |")
+            print("+-----+---------------------------+--------------+----------+")
+
+            pilih_produk5 = input("Pilih produk (masukkan nomor ID): ").strip()
+
+            if not pilih_produk5.isdigit() or int(pilih_produk5) not in df["ID"].values:
+                print("Pilihan tidak tersedia!")
+                input("Tekan Enter untuk kembali.")
+                jenis_produk(username)
+                return
+
+            produk_row = df[df["ID"] == int(pilih_produk5)].iloc[0]
+            produk = produk_row["Nama_Produk"]
+            harga = produk_row["Harga"]
+            stok = produk_row["Stok"]
+            deskripsi = produk_row["Deskripsi"]
+            spek = produk_row["Spesifikasi"]
+            print(f"\nDetail Produk: {produk}")
+            print(f"{deskripsi} | {spek}")
+            print(f"Harga: Rp {harga:,}")
+            print(f"Stok: {stok}")
+            print('''
+            A. Masukkan keranjang
+            B. Beli dan bayar
+            ''')
+            keranjang_beli = input("Pilih menu: ").strip().upper()
+            if keranjang_beli == "A":
+                keranjang(username, produk, harga, stok)
+            elif keranjang_beli == "B":
+                keranjang(username, produk, harga, stok)
+                pembayaran(username)
+            else:
+                print("Pilihan tidak tersedia. Kembali ke menu.")
+                jenis_produk(username)
+        else: 
+            print ("Produk tidak ada!")
+            input ("tekan enter untuk kembali")
+            jenis_produk (username)
+    
+    elif jenis == "7":
+        home ()
+
+    else:
+        print("Masukkan pilihan!")
+        input("Tekan enter untuk kembali")
+        jenis_produk(username)
 
 def keranjang(username, produk, harga, stok):
-    jumlah = int(input(f"Masukkan jumlah {produk}: "))
+    jumlah_input = input(f"Masukkan jumlah {produk}: ")
+
+    if jumlah_input.strip() == "":
+        print("Anda belum memasukkan stok")
+        keranjang(username, produk, harga, stok)
     
-    if jumlah > stok:
+    try:
+        jumlah = int(jumlah_input)
+    except ValueError:
+        print("Input harus berupa angka")
+        input ("Tekan enter untuk kembali!")
+        keranjang(username, produk, harga, stok)
+
+    if jumlah < 1:
+        print("Input salah (harus lebih dari 0)")
+        keranjang(username, produk, harga, stok)
+
+    elif jumlah > stok:
         print(f"Stok {produk} tidak mencukupi. Stok tersedia: {stok}")
-        return
+        keranjang(username, produk, harga, stok)
+
+    else:
+        print(f"{jumlah} {produk} berhasil ditambahkan ke keranjang.")
+
     
     total_harga = harga * jumlah
     stok_tersisa = stok - jumlah
@@ -1737,11 +1176,11 @@ def keranjang(username, produk, harga, stok):
     produk_ada = False
     for i in range(len(data_keranjang)):
         if len(data_keranjang[i]) == 6:
-            user, prod, hrg, jml, tot, stok_ada = data_keranjang[i]
+            user, prod, hrg, jml, tot, stok = data_keranjang[i]
             if user == username and prod == produk:
                 data_keranjang[i][3] = str(int(jml) + jumlah)  
                 data_keranjang[i][4] = str(harga * int(data_keranjang[i][3]))
-                data_keranjang[i][5] = str(int(stok_ada) - jumlah)
+                data_keranjang[i][5] = str(int(stok) - jumlah)
                 produk_ada = True
                 break
     
@@ -1762,9 +1201,9 @@ def keranjang(username, produk, harga, stok):
     keranjang_beli = input("Pilih menu: ").strip().upper()
 
     if keranjang_beli == "A":
-        jenis_produk(username)  # Fungsi jenis_produk harus didefinisikan
+        jenis_produk(username) 
     elif keranjang_beli == "B":
-        ongkir = data_pengiriman()  # Fungsi data_pengiriman harus didefinisikan
+        ongkir = data_pengiriman() 
         pembayaran(username, ongkir)
     else:
         print("Pilihan tidak tersedia. Kembali ke menu utama.")
@@ -1777,7 +1216,7 @@ def pembayaran(username, ongkir):
 
     print(f"Keranjang {username}:")
     print("+---------------------+---------------+----------------+-------------------+")
-    print("| Produk             | Harga (Rp)    | Jumlah         | Total (Rp)       |")
+    print("| Produk              | Harga (Rp)    | Jumlah         | Total (Rp)        |")
     print("+---------------------+---------------+----------------+-------------------+")
 
     try:
@@ -1795,11 +1234,14 @@ def pembayaran(username, ongkir):
 
                 user, produk, harga, jumlah, total, stok = row
                 try:
+                    user = str(user)
+                    produk = str(produk)
                     harga = int(harga)
                     jumlah = int(jumlah)
                     total = int(total)
+                    stok = int(stok)
                 except ValueError:
-                    print(f"Data tidak valid: {row}")
+                    
                     continue
 
                 if user == username:
@@ -1814,10 +1256,10 @@ def pembayaran(username, ongkir):
                         }
 
         for produk, data in keranjang_user.items():
-            print(f"| {produk:<18} | {data['harga']:>13,} | {data['jumlah']:>12} | {data['total']:>15,} |")
+            print(f"| {produk:<19} | {data['harga']:>13,} | {data['jumlah']:>14} | {data['total']:>17,} |")
             total_belanja += data['total']
 
-        # Tambahkan ongkir ke total belanja
+
         total_belanja += int(ongkir)
 
     except FileNotFoundError:
@@ -1829,22 +1271,45 @@ def pembayaran(username, ongkir):
     print('''
     Pilih Metode Pembayaran:
     1. Bank Account
-    2. Cash on Delivery
     ''')
     metode = input("Pilih metode pembayaran: ").strip()
     if metode == '1':
-        bank_account(total_belanja)  # Fungsi bank_account harus didefinisikan
-    elif metode == '2':
-        print(f"Total Belanja: Rp{total_belanja}")
-        print("Pembayaran akan dilakukan saat barang diterima (COD).")
-        kosongkan_keranjang(username)  # Fungsi kosongkan_keranjang harus didefinisikan
+        bank_account(username, total_belanja)
     else:
         print("Metode pembayaran tidak valid.")
         pembayaran(username, ongkir)
+        
+def kosongkan_keranjang(username):
+    data_baru = [] 
+    
+    try:
+        with open('keranjangTRIJAYA.csv', mode='r', newline='') as file:
+            reader = csv.reader(file)
+            header = next(reader, None)
+            
+            if header:
+                data_baru.append(header)
+            
+            for row in reader:
+                if len(row) != len(header):
+                    print(f"Baris tidak valid: {row}. Lewati.")
+                    continue
 
-def bank_account(total_belanja):
+                if row[0] != username:
+                    data_baru.append(row)
+
+        with open('keranjangTRIJAYA.csv', mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerows(data_baru)
+    except FileNotFoundError:
+        print("File keranjang tidak ditemukan.")
+    except Exception as e:
+        print(f"Terjadi kesalahan saat mengosongkan keranjang: {e}")
+
+def bank_account(username,total_belanja):
+    os.system ("cls")
     print('''
-    Pilih Bank:
+    Pilih Pembayaran Bank:
     1. BCA
     2. Mandiri
     3. BRI
@@ -1852,115 +1317,42 @@ def bank_account(total_belanja):
     ''')
     bank = input("Pilih bank: ").strip()
     if bank in ['1', '2', '3', '4']:
-        input("Masukkan nomor rekening Anda: ")
+        rekening = input("Masukkan nomor rekening Anda: ")
+        if not rekening :
+            print ("Rekening belum dimasukkan")
+            input ("Tekan enter untuk mengisi kembali!")
+            bank_account (username, total_belanja)
         print(f"Total yang harus dibayarkan: Rp{total_belanja}")
         print(f"Lakukan pembayaran ke rekening TRIJAYA: 2424101010.")
-        input("Masukkan jumlah uang :")
-        print("Pembayaran berhasil!")
+        jumlah_uang = int(input("Masukkan jumlah uang :"))
+        sisa_saldo = jumlah_uang-total_belanja
+        if jumlah_uang < total_belanja:
+            print("Uang tidak cukup")
+            bank_account(username, total_belanja)
+        elif jumlah_uang > total_belanja:
+            print(f"Kembalian Anda : {sisa_saldo}")
+            print("Pembayaran berhasil!")
+        elif jumlah_uang == total_belanja:
+            print("Pembayaran berhasil!")
         print('''
             A. Kembali ke menu utama
             B. Keluar
         ''')
         pilihan = input("Pilih menu: ").strip().upper()
         if pilihan == "A":
-            kosongkan_keranjang()
+            kosongkan_keranjang(username)
             home() 
         elif pilihan == "B":
             print("Terima kasih telah berbelanja di TRIJAYA!")
-
+            kosongkan_keranjang (username)
             exit()
         else:
             print("Pilihan tidak valid. Mengakhiri program.")
+            kosongkan_keranjang (username)
             exit()
     else:
         print("Pilihan bank tidak valid.")
-        bank_account(total_belanja)
-
-def kosongkan_keranjang(username):
-    data_baru = []
-    try:
-        with open('KeranjangTRIJAYA.csv', mode='r') as file:
-            reader = csv.reader(file)
-            header = next(reader)
-            for row in reader:
-                if row[0] != username:  
-                    data_baru.append(row)
-    except FileNotFoundError:
-        print("File keranjang tidak ditemukan.")
-        return
-       
-    with open('KeranjangTRIJAYA.csv', mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(header)
-        writer.writerows(data_baru)
-    print("Keranjang Anda telah dikosongkan.")
-    jenis_produk(username)
-    kosongkan_keranjang(username)
-
-
-def data_pengiriman():
-    os.system('cls')
-    
-    nama_pembeli = input ("Masukkan Nama: ")
-    provinsi_pembeli = input ("Masukkan Provinsi: ")
-    alamat_pembeli = input ("Masukkan Alamat: ")
-    no_pembeli = input ("Masukkan Nomor HP: ")
-
-    print ('''
-    PILIH OPSI KURIR:
-    1. JNE
-    2. SiCepat Express
-    3. JNT
-    4. Trijaya Express
-           ''')
-    kurir = input ("Pilih Opsi Kurir: ")
-    if kurir == "1":
-        print ("Pengriman Menggunakan JNE, dengan nama", nama_pembeli ,)
-        print ("Provinsi: ", provinsi_pembeli)
-        print ("Alamat: ", alamat_pembeli)
-        print ("Nomor HP: ", no_pembeli)
-
-    elif kurir == "2":
-        print ("Pengriman Menggunakan SiCepat Express, dengan nama", nama_pembeli ,)
-        print ("Provinsi: ", provinsi_pembeli)
-        print ("Alamat: ", alamat_pembeli)
-        print ("Nomor HP: ", no_pembeli)
-    
-    elif kurir == "3":
-        print ("Pengriman Menggunakan JNT, dengan nama", nama_pembeli ,)
-        print ("Provinsi: ", provinsi_pembeli)
-        print ("Alamat: ", alamat_pembeli)
-        print ("Nomor HP: ", no_pembeli)
-    
-    elif kurir == "4":
-        print ("Pengriman Menggunakan Trijaya Express, dengan nama", nama_pembeli ,)
-        print ("Provinsi: ", provinsi_pembeli)
-        print ("Alamat: ", alamat_pembeli)
-        print ("Nomor HP: ", no_pembeli)
-
-    elif not os.path.isfile('provinsi.csv'): 
-        print("Wilayah Tidak Tersedia!.")
+        input ("Tekan enter untuk pilih kembali!")
+        bank_account(username, total_belanja)
         
-    
-    with open('provinsi.csv', mode='r') as file:
-        reader = csv.DictReader(file)
-        provinsi_found = False  
-        for row in reader:
-            if row['provinsi'].lower() == provinsi_pembeli.lower():  
-                provinsi_found = True
-                ongkir = row['ongkir']
-                print(f"Ongkir untuk wilayah {provinsi_pembeli} adalah {ongkir}!")
-                return ongkir
-                
-    
-        if not provinsi_found:
-            print(f"Provinsi {provinsi_pembeli} tidak ditemukan dalam daftar.")
-            return None
-        
-def main():
-    home()
-    
-main()
-
-     
-                 
+home()
