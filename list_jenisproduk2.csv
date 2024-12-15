@@ -1,6 +1,6 @@
-produk,Harga,Stok
-Gembor,45000,20
-Gunting Dahan,60000,10
-Sprayer Manual,70000,15
-Pemangkas Tunas Kecil,40000,25
-Alat Pencabut Rumput,35000,30
+ID,Nama_Produk,Harga,Stok,Deskripsi,Spesifikasi
+1,Gembor, 45000, 30, Penyiram tanaman dengan desain tradisional, Material dari bahan Plastik tahan UV dengan Kapasitas 5 liter
+2,Gunting Dahan, 60000, 30, Gunting kuat untuk memotong dahan dengan mudah, Material dari bahan Baja karbon dengan Pegangan Anti slip
+3,Sprayer Manual, 70000, 30, Alat penyemprot untuk pestisida atau pupuk cair, Kapasitas 2 liter dengan Material bahan Plastik tebal
+4,Pemangkas Tunas Kecil, 40000, 30, Pemotong presisi untuk merapikan tunas kecil, Material dari bahan Baja stainless dengan Panjang 20 cm
+5,Alat Pencabut Rumput, 35000, 30, Memudahkan mencabut rumput tanpa merusak tanaman, Material dari bahan Baja dengan Pegangan bahan dasar Kayu ergonomis
