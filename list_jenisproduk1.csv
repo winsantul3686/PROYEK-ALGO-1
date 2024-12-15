@@ -1,7 +1,7 @@
-produk,harga,stok
-
-Cangkul,50000,20
-Sekop,40000,30
-Garpu Tanah,30000,15
-Penugal Tanam Manual,30000,25
-Ember Plastik,15000,50
+ID,Nama_Produk,Harga,Stok,Deskripsi,Spesifikasi
+1,Cangkul,25000,10, Alat tanam serbaguna dari baja yang tahan lama, Baja tahan karar dengan pegangan berbahan kayu ergonomis
+2,Sekop,40000,30, Alat berbahan ringan dengan pegangan ergonomis, material baja ringan serta pegangan dengan bahan plastik anti slip
+3,Garpu Tanah,30000,30, Alat tajam dan kuat untuk melonggarkan tanah, Material dari Baja dan Pegangan Kayu solid serta Dimensi 25 cm
+4,Penugal Tanam Manual,30000,30, Alat sederhana untuk membuat lubang tanam, Material dari Logam tahan karat dengan Panjang 30 cm
+5,Ember Plastik,15000,30, Ember ringan untuk mengangkut air atau material lainnya, Material dari Plastik tebal dengan Kapasitas 10 liter
+6,Cangkul Plastik,20000,10,Cangkul Plastik kokoh,Plastik berkualitas
