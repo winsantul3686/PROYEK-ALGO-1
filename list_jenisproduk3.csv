@@ -1,6 +1,5 @@
-produk,Harga,Stok
-Sabit,50000,12
-Pisau Panen,25000,40
-Keranjang Panen Plastik,30000,20
-Timbangan Digital,150000,8
-Kantong Plastik Panen (10 pcs),30000,100
+ID,Nama_Produk,Harga,Stok,Deskripsi,Spesifikasi
+1,Pisau Panen,25000,30, Pisau kecil untuk memotong buah atau tanaman kecil, Material Baja dengan Pegangan berbahan dasar Plastik ergonomis
+2,Keranjang Panen Plastik,30000,30, Keranjang ringan dan tahan lama untuk hasil panen, Material Plastik tebal dengan Kapasitas 20 liter
+3,Timbangan Digital,150000,30, Timbangan presisi tinggi untuk hasil panen,Kapasitas 30 kg dan Layar Digital LED
+4,Kantong Plastik Panen,30000,30, Paket plastik untuk membungkus hasil panen, Material Plastik berkualitas tinggi dengan Jumlah 10 pcs
